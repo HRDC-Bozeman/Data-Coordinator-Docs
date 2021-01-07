@@ -1,18 +1,20 @@
+<a href="https://github.com/Pasmuth/CaseWorthy-Documentation.git" target="_blank">Documentation Home</a>
+
 # Housing Data Entry Instructions
 
 ## Table of Contents
 
-1. Before You Start
+1. [Before You Start](#before-you-start)
    1. General Information
    1. Daily Support Session
-1. Basic Navigation
-1. Finding Clients
-1. Brand New Clients
-1. Existing Clients
-1. Assessments
+1. [Basic Navigation](#basic-navigation)
+1. [Finding Clients](#finding-clients)
+1. [Brand New Clients](#brand-new-clients)
+1. [Existing Clients](#existing-clients)
+1. [Assessments](#assessments)
    1. Updating Client Assessments
-1. Household Composition Changes
-1. Case Management Tools
+1. [Household Composition Changes](#household-composition-changes)
+1. [Case Management Tools](#case-management-tools)
 
 ## Before You Start
 
@@ -27,7 +29,8 @@ To obtain login credentials, contact your manager.
 ---
 ---
 
-## Basic Navigation
+## Basic Navigation 
+[\[Back to Top\]](#table-of-contents)
 
 When you navigate to the CaseWorthy URL, you are greeted with this login screen. To continue, enter you Username and Password. If this is your first time logging in you may be asked to change your password. 
 
@@ -60,7 +63,8 @@ The first thing you see when looking at a client record is the Client Dashboard.
 ---
 ---
 
-## Finding Clients
+## Finding Clients 
+[\[Back to Top\]](#table-of-contents)
 
 To find clients, click the "Find Client" menu item on the left. This will open a form that with several fields for personal information:
 
@@ -92,11 +96,23 @@ You should always search in at least two different ways, but possibly more if th
 ---
 ---
 
-## Brand New Clients
+## Brand New Clients 
+[\[Back to Top\]](#table-of-contents)
 
-To create a new client in CaseWorthy click the "Intake: Brand New Clients" button on the left navigation bar. This will start a new workflow, which is a series of "forms" that gather the required information about the client and their interactions with HRDC.
+The intake process for brand new clients has a few basic components. 
 
-1. First, information about the head of household is collected on the <a href="Forms/1000000004.md" target="_blank">Client Demographics</a> form. This form contains fields for personal information, like their name, age and gender, as well as some contact and address information. Once all the required fields are complete, click "Save" at the bottom of the form to commit the changes, or "Cancel" if you decide not to. Clicking "Cancel" will end the workflow. 
+- Collect Demographic information about the family/household
+  - This includes names, DOBs, address history, race/ethnicity, etc.
+- Begin their program enrollment with HRDC (Universal Intake) and with the housing programs (Home to Stay)
+- Collect required intake data
+  - This includes information on housing, employment, health insurance, etc.
+
+The step-by-step below covers all the steps in detail
+### Step-by-Step
+To create a new client in CaseWorthy click the "Intake: Brand New Clients" button on the left navigation bar. This will start a new workflow, which is a series of "forms" that gather the required information about the client and their interactions with HRDC. Each of the list items below represents an individual form.
+
+1. First, information about the head of household is collected on the <a href="Forms/1000000004.md" target="_blank">Client Demographics</a> form. This form contains fields for personal information, like their name, age and gender, as well as some contact and address information. Once all the required fields are complete, click "Save" at the bottom of the form to commit the changes, or "Cancel" if you decide not to. Clicking "Cancel" will end the workflow.
+  - NOTE: If the client has no address you need to "Make Verify Address not Mandatory". Otherwise their address will be recorded as the Warming Center, which is not accurate.
 1. After saving the client demographics, you will be prompted to update the client <a href="Forms/1000000134.md" target="_blank">Address History</a>. For brand new clients this is usually limited to adding a mailing address. You only have to enter a mailing address if it is different from their physical address. 
 1. The next form lets you <a href="Forms/1000000131.md" target="_blank">Add Family Members</a>. The "+ Add Row" button creates a new set of fields for the personal information of a family member. Each new set of fields also come with its own duplicate check stored procedure, like the one on the first <a href="Forms/1000000004.md" target="_blank">Client Demographics</a> form.
 1. The <a href="Forms/1000000246.md" target="_blank">Universal Intake Enrollment</a> creates an enrollment for the family we just created. The only field you need to fill is "Program Entry Date". "Intake Completed By" will default to the user entering the data, but it can be changed if somebody is doing data entry on behalf of somebody else.
@@ -118,7 +134,8 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
 ---
 ---
 
-## Existing Clients
+## Existing Clients 
+[\[Back to Top\]](#table-of-contents)
 
 If you need to enroll a client or family that already exists in CaseWorthy the process is much simpler. Click the "Intake: Existing Clients" button on the left navigation bar. This launches a shorter workflow that focuses on enrollment and assessment data, and skips collecting some of the more general client demographics.
 
@@ -134,7 +151,8 @@ If you need to enroll a client or family that already exists in CaseWorthy the p
 ---
 ---
 
-## Assessments
+## Assessments 
+[\[Back to Top\]](#table-of-contents)
 
 An Assessment is simply a collection of data made by a specific program on a specific date. The assessments that you completed as part of the intake process are known as "At Entry" assessments, but there are also "During", "At Exit", and "Annual" assessments. To review a client's assessment history use the <a href="Forms/1000000256.md" target="_blank">Assessment Summary</a> form from the left navigation bar. This form displays the date of the assessment, the assessment type, who collected the information, and for which program it was collected. Clicking the Action Gear on a row will allow you to review responses to specific assessment questions.
 
@@ -147,7 +165,8 @@ You can create a new assessment from the assessment summary form by clicking the
 ---
 ---
 
-## Household Composition Changes
+## Household Composition Changes 
+[\[Back to Top\]](#table-of-contents)
 
 1. Close the <a href="Forms/1000000266.md" target="_blank">Program Enrollment</a>s for the family member to be moved.
 1. Review the family history on the <a href="Forms/1000000048.md" target="_blank">Client Families</a> form.
@@ -157,7 +176,8 @@ You can create a new assessment from the assessment summary form by clicking the
 ---
 ---
   
-## Case Management Tools
+## Case Management Tools 
+[\[Back to Top\]](#table-of-contents)
 
 - Case Notes
 - Services
