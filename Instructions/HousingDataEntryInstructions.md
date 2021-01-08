@@ -109,7 +109,7 @@ The intake process for brand new clients has a few basic components.
 
 The step-by-step below covers all the steps in detail
 ### Step-by-Step
-To create a new client in CaseWorthy click the "Intake: Brand New Clients" button on the left navigation bar. This will start a new workflow, which is a series of "../Forms" that gather the required information about the client and their interactions with HRDC. Each of the list items below represents an individual form.
+To create a new client in CaseWorthy click the "Intake: Brand New Clients" button on the left navigation bar. This will start a new workflow, which is a series of forms that gather the required information about the client and their interactions with HRDC. Each of the list items below represents an individual form.
 
 1. First, information about the head of household is collected on the [Client Demographics](../Forms/1000000004.md) form. This form contains fields for personal information, like their name, age and gender, as well as some contact and address information. Once all the required fields are complete, click "Save" at the bottom of the form to commit the changes, or "Cancel" if you decide not to. Clicking "Cancel" will end the workflow.
   - NOTE: If the client has no address you need to "Make Verify Address not Mandatory". Otherwise their address will be recorded as the Warming Center, which is not accurate.
