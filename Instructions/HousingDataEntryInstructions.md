@@ -26,6 +26,10 @@ It is recommended that you use Google Chrome, but you can also use Firefox or Ed
 
 To obtain login credentials, contact your manager.
 
+## Daily Support Session
+
+There is a daily support session for CaseWorthy users at 11 AM on Google Meet at this link: [https://meet.google.com/tzz-cvhc-vrd](https://meet.google.com/tzz-cvhc-vrd)
+
 ---
 ---
 
@@ -34,7 +38,7 @@ To obtain login credentials, contact your manager.
 
 When you navigate to the CaseWorthy URL, you are greeted with this login screen. To continue, enter you Username and Password. If this is your first time logging in you may be asked to change your password. 
 
-Once you login, you will see your user information displayed in the top-right corner of the screen. Directly below your name will be your current role. In this example you can see that Peter Asmuth is logged in, and my selected role is Universal Intake. Clicking on the arrow in the corner will allow you to change your role or log out of CaseWorthy.
+Once you login, you will see your user information displayed in the top-right corner of the screen. Directly below your name will be your current role. In this example you can see that Peter Asmuth is logged in, and his selected role is Universal Intake. Clicking on the arrow in the corner will allow you to change your role or log out of CaseWorthy.
 
 ![Client Dashboard](../Images/clientdashboard.png)
 
