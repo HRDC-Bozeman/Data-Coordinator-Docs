@@ -9,7 +9,7 @@
 
 ## Introduction
 
-This documentation is assembled from a collection of Markdown files (.md). These files can link to each other, as well as embed images and link to external sources. This is ideal for creating a living document where a great deal of depth and breadth is required. Individual documents can go into depth on a single idea, while linking to other documents to provide supporting information. Each file can be updated independently, which makes it easier to keep everything up to date.
+This documentation is assembled from a collection of Markdown files (.md). The document you are reading right now was written using Markdown. Markdown files can link to each other, contain embedded images, and link to external sources. This is ideal for creating a living document where a great deal of depth and breadth is required. Individual documents can go into depth on a single idea, while linking to other documents to provide supporting information. Each file can be updated independently, which makes it easier to keep everything up to date.
 
 This documentation also uses [Github](https://github.com/) as a collaboration and hosting tool. Github is built to allow multiple people working on different aspects of a project contribute to one set of master source code. Github is the industry standard for collaboration on software projects, but we can apply the same principles to the process of documenting everything at HRDC. Github also supports the use of Markdown files for writing project READMEs. Markdown files viewed on Github are automatically shown in their rendered (i.e. pretty) state.
 
@@ -35,9 +35,7 @@ I recommend choosing your editor based on what you are trying to accomplish. If 
 
 ### Git
 
-- Git vs. Github
-- Cloning a repository
-- Creating a branch
-- Committing changes
-- Pushing to origin
-- Merging Branches
+You ***do not*** need to be an expert in Git to contribute to the HRDC documentation. The [HRDC Git Guide](gitguide.md) gives a high level overview of what Git is and what it does, for curious readers.
+
+If you want to contribute to the master documentation, but you just cannot get your mind around Git, there will be help available.
+
