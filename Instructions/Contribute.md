@@ -1,11 +1,9 @@
 # Contributing to this documentation
 
-1. [Introduction](#introduction)
-1. [How to Contribute](#how-to-contribute)
-   1. [Write Markdown Documents](#write-markdown-documents)
-   1. [Basic Syntax](#basic-syntax)
-   1. [How do I Edit Markdown?](#how-do-i-edit-markdown)
-   1. [Git](#git)
+- [Introduction](#introduction)
+- [How to Contribute](#how-to-contribute)
+   - [Write Markdown Documents](#write-markdown-documents)
+   - [Git](#git)
 
 ## Introduction
 
@@ -17,6 +15,14 @@ This documentation also uses [Github](https://github.com/) as a collaboration an
 ---
 
 ## How to Contribute
+
+Making contributions follows this basic workflow. The goal of this article is to give instructions on every step of the process, ***but you do not need to master each of these steps to make a contribution***. The Data and IT team will be available to help you along the way.
+
+1. Identify changes that need to be made in the master documentation.
+1. Make a branch of the master using Git.
+1. Make edits to the individual files that need to be changed.
+1. Commit those changes to the branch.
+1. Merge the branch back into the master documentation.
 
 ### Write Markdown Documents
 
