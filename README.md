@@ -2,8 +2,9 @@
 
 This is the central location for all the most up-to-date CaseWorthy Information. It's still new and incomplete, but eventually this repository will contain
 
+- [Contribute to this documentation](Instructions/Contribute.md)
 - Data Entry Instructions
-  - <a href="Instructions/HousingDataEntryInstructions.md" target="_blank">Housing</a>
+  - [Housing](Instructions/HousingDataEntryInstructions.md)
 - Reporting Instructions
 - System Administrator Information
   - Detailed information about all CaseWorthy database objects
