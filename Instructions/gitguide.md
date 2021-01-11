@@ -1,3 +1,5 @@
+[Documentation Home](../README.md)
+
 # Git Guide
 
 ## What is Git

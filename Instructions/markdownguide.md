@@ -1,3 +1,5 @@
+[Documentation Home](../README.md)
+
 # Markdown Guide
 
 1. [Basic Syntax](#basic-syntax)
