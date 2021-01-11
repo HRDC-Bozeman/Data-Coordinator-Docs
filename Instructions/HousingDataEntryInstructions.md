@@ -20,7 +20,7 @@
 
 You can access CaseWorthy from any computer with an internet connection. The link can be found below. You may find it useful to bookmark this link for future reference.
 
-[https://app.caseworthy.com/hrdc09_prod.ecm](https://app.caseworthy.com/hrdc09_prod.ecm)
+<a href="https://app.caseworthy.com/hrdc09_prod.ecm" target="_blank">https://app.caseworthy.com/hrdc09_prod.ecm</a>
 
 It is recommended that you use Google Chrome, but you can also use Firefox or Edge. You CANNOT use CaseWorthy with Internet Explorer.
 
