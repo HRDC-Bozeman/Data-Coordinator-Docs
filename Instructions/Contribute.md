@@ -1,3 +1,5 @@
+[Documentation Home](../README.md)
+
 # Contributing to this documentation
 
 - [Introduction](#introduction)
