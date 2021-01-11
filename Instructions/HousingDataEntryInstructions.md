@@ -197,6 +197,14 @@ You can create a new assessment from the assessment summary form by clicking the
 ## Case Management Tools 
 [\[Back to Top\]](#table-of-contents)
 
+There are a bunch of tools under the Case Management menu on the left-navigation bar.
+
+### Document Upload
+
+Click Documents to view uploaded files. Click "+ Add New" to upload a new document. Check the appropriate row for the document type you are uploading. Click "Browse" to upload the file from your computer.
+
+![Document Upload](../Images/documentupload.jpg)
+
 - Case Notes
 - Services
 - Alerts
