@@ -132,25 +132,31 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
 
  - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?" Say yes if you are enrolling this household in one of the following programs:
  
- - [Housing](#housing)
- - [Homemaker Program](#homemaker-program)
- - [Senior Groceries](#senior-groceries)
+ - Housing
+   - Collects additional information
+ - Homemaker Program
+   - Uses Program Attendance feature
+ - Senior Groceries
+   - Uses Program Attendance feature
+   
+   
+ ### Additional Programs
  
- 
- 
+ - On the [Enrollment Add/Edit](../Forms/1000000030.md) form select the additional program under the Program dropdown and use the same Program Entry Date that you used for the initial enrollment.
+ - You will have to select which family members to enroll again on the [Enrollment Members](../Forms/1000000259.md) form.
+ - You will again be asked if you want to complete assessments, say yes. This will create a new set of [Assessments](../Objects/Assessment.md) that will be tied to the additional program enrollment.
+ - You may be given the option to Copy Assessments. This will fill in all the data that you already entered for the Universal Intake.
  
  #### Housing
  
- - On the [Enrollment Add/Edit](../Forms/1000000030.md) form select "Home to Stay" under Program and use the same Program Entry Date that you used for the initial enrollment.
- - You will have to select which family members to enroll again on the [Enrollment Members](../Forms/1000000259.md) form.
- - You will again be asked if you want to complete assessments, say yes. This will create a new set of [Assessments](../Objects/Assessment.md) that will be tied to the housing enrollment. A lot of the data needed for housing overlaps with the data collected for the Universal Intake, but there are a few extra items that need to be added.
- - You should be given the option to Copy Assessments. This will fill in all the data that you already entered for the Universal Intake.
-     - The [HUD Assessment](../Forms/1000000248.md) may ask for additional data depending on the family.
-     - The [Chronic Homelessness](../Forms/1000000262.md) collects more detailed information about the housing status of each family member. Data entered on this form determines if a client meets the HUD definition for chronic homelessness.
-     - There are no additional questions on the [Financial Assessment](../Forms/1000000145.md), but you may be prompted to enter data on additional family members.
- - This is the end of the workflow. Click "Done" when you are finished reviewing the summary of the forms you filled out.
+ - The [HUD Assessment](../Forms/1000000248.md) may ask for additional data depending on the family.
+ - The [Chronic Homelessness](../Forms/1000000262.md) collects more detailed information about the housing status of each family member. Data entered on this form determines if a client meets the HUD definition for chronic homelessness.
+ - There are no additional questions on the [Financial Assessment](../Forms/1000000145.md), but you may be prompted to enter data on additional family members.
  
- ![Workflow Summary](../Images/workflowsummary.JPG)
+ #### Homemaker and Senior Groceries
+ 
+ These programs only collect data from the HUD Assessment and the Financial Assessment. There are no additional program specific data points. This enrollment is used to take advantage of the "Program Attendance" functionality, which allows a user to post a service to multiple clients at the same time.
+
 
 ---
 ---
