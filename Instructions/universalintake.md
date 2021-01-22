@@ -1,6 +1,6 @@
 [Documentation Home](../README.md)
 
-# Universal Intake Instructions
+# CaseWorthy Data Entry Instructions
 
 This page will hold all of the generalized universal intake instructions. Other pages will go into program specifics if needed.
 
@@ -12,6 +12,7 @@ This page will hold all of the generalized universal intake instructions. Other 
 1. [Basic Navigation](#basic-navigation)
 1. [Finding Clients](#finding-clients)
 1. [Brand New Clients](#brand-new-clients)
+   1. [Additional Programs](#additional-programs) 
 1. [Existing Clients](#existing-clients)
 1. [Assessments](#assessments)
    1. Updating Client Assessments
@@ -128,19 +129,13 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
     - The [HUD Assessment](../Forms/1000000248.md) collects data on things like housing status, non-cash benefits received, employment status, and more. You will have to complete the HUD Assessment for each enrolled member, but not all family members will be asked the same questions. 
     - The [Financial Assessment](../Forms/1000000145.md) collects data on household income and its sources. Check each row that applies, enter the amount, and the interval. There are additional fields to record how and when the data was verified, but they are not required.
     
-![Additional Enrollments?](../Images/additionalprograms.jpg)
+### Additional Programs
 
  - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?" Say yes if you are enrolling this household in one of the following programs:
- 
- - Housing
-   - Collects additional information
- - Homemaker Program
-   - Uses Program Attendance feature
- - Senior Groceries
-   - Uses Program Attendance feature
-   
-   
- ### Additional Programs
+
+![Additional Enrollments?](../Images/additionalprograms.jpg)
+
+Select "Yes" if you are enrolling a client into housing, homemaker, senior reach, or senior groceries. Some housing programs require additional assessment data for funding and compliance purposes. The supplemental enrollment allows CaseWorthy to record those data. Homemaker, Senior Reach, and Senior Groceries use the program attendance feature, which allows services to be added for multiple clients at the same time.
  
  - On the [Enrollment Add/Edit](../Forms/1000000030.md) form select the additional program under the Program dropdown and use the same Program Entry Date that you used for the initial enrollment.
  - You will have to select which family members to enroll again on the [Enrollment Members](../Forms/1000000259.md) form.
@@ -153,9 +148,9 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
  - The [Chronic Homelessness](../Forms/1000000262.md) collects more detailed information about the housing status of each family member. Data entered on this form determines if a client meets the HUD definition for chronic homelessness.
  - There are no additional questions on the [Financial Assessment](../Forms/1000000145.md), but you may be prompted to enter data on additional family members.
  
- #### Homemaker and Senior Groceries
+ #### Homemaker, Senior Reach, Senior Groceries
  
- These programs only collect data from the HUD Assessment and the Financial Assessment. There are no additional program specific data points. This enrollment is used to take advantage of the "Program Attendance" functionality, which allows a user to post a service to multiple clients at the same time.
+ These programs only collect data from the HUD Assessment and the Financial Assessment. There are no additional program specific data points.
 
 
 ---
