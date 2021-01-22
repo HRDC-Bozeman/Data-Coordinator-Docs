@@ -131,7 +131,7 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
     
 ### Additional Programs
 
- - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?" Say yes if you are enrolling this household in one of the following programs:
+ - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?"
 
 ![Additional Enrollments?](../Images/additionalprograms.JPG)
 
