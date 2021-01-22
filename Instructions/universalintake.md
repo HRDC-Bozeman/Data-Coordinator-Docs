@@ -131,11 +131,11 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
     
 ### Additional Programs
 
- - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?"
+ - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?" Select "Yes" if you are enrolling a client into housing, homemaker, senior reach, or senior groceries. Some housing programs require additional assessment data for funding and compliance purposes. The supplemental enrollment allows CaseWorthy to record those data. Homemaker, Senior Reach, and Senior Groceries use the program attendance feature, which allows services to be added for multiple clients at the same time.
 
 ![Additional Enrollments?](../Images/additionalprograms.JPG)
 
-Select "Yes" if you are enrolling a client into housing, homemaker, senior reach, or senior groceries. Some housing programs require additional assessment data for funding and compliance purposes. The supplemental enrollment allows CaseWorthy to record those data. Homemaker, Senior Reach, and Senior Groceries use the program attendance feature, which allows services to be added for multiple clients at the same time.
+
  
  - On the [Enrollment Add/Edit](../Forms/1000000030.md) form select the additional program under the Program dropdown and use the same Program Entry Date that you used for the initial enrollment.
  - You will have to select which family members to enroll again on the [Enrollment Members](../Forms/1000000259.md) form.
