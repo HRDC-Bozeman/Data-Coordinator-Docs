@@ -72,7 +72,7 @@ In most cases, a client should only be in one family at a time. Make sure that t
 
 CaseWorthy provides a full database backup on a nightly basis. These backups come in the form of a .bak file. You can find them under the HRDC Admin role, Administration tab, click-path shown below.
 
-![Database Backups](../Images/Databasebackups.png)
+![Database Backups](../Images/databasebackups.png)
 
 
 ## SQL Server Management Studio (SSMS)
