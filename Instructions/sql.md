@@ -2,6 +2,12 @@
 
 # Structured Query Language - SQL
 
+1. [What is SQL](#what-is-sql)
+1. [Databases and Tables](#databases-and-tables)
+1. [Queries](#queries)
+1. [Database Backups](#database-backups)
+1. [SQL Server Management Studio (SSMS)](#sql-server-management-studio)
+
 ## What is SQL?
 - SQL (pronounced sequel) stands for Structured Query Language
 - It is a programming language that lets us pull data from (query) and manipulate databases.
@@ -21,6 +27,36 @@ All tables have a primary key which lets us quickly pull specific records. The p
 ![Basic Join](../Images/basicjoin.jpg)
 
 The City column in the Person table has been replaced by a Foreign Key column that establishes a relationship between **Person** and **City**.
+
+## Queries
+
+## Database Backups
+
+### Layers of CaseWorthy
+
+- CaseWorthy, the application
+  - The CaseWorthy application is a web service that users can log into and enter and retrieve data. When you think of users using CaseWorthy, they are using the application layer
+- CaseWorthy, the database
+  - The application layer of CaseWorthy interacts with the database layer to perform basic CRUD (Create, Retrieve, Update, Delete) operations. Operations performed on the application layer generate SQL code that interacts with the database. There is no way for HRDC users to directly interact with the database layer.
+- CaseWorthy, the corporation
+  - CaseWorthy is also a corporate entity that manages and maintains the application and database layers.
+
+CaseWorthy provides a full database backup on a nightly basis. These backups come in the form of a .bak file. You can find them under the HRDC Admin role, Administration tab, click-path shown below.
+
+![Database Backups](../Images/databasebackups.png)
+
+
+## SQL Server Management Studio
+
+You can interact with local database backups using SQL Server Management Studio (SSMS).
+
+### Install a local SQL server
+
+The first step in working with a local backup is to [download and install SQL Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads). This local server will mimic the SQL server that lives in the CaseWorthy data center.
+
+
+### Connect via SSMS
+### Restore database from .bak
 
 
 
