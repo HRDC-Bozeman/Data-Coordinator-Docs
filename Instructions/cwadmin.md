@@ -60,7 +60,42 @@ In most cases, a client should only be in one family at a time. Make sure that t
 
 ## Client Merges
 
+<<<<<<< Updated upstream
 Sometimes users will create duplicate clients. This necessitates the merging of client records. When two records are merged, all the services and enrollments from one client are transferred to another, and one of the client records can subsequently be deleted.
+=======
+### Layers of CaseWorthy
+
+- CaseWorthy, the application
+  - The CaseWorthy application is a web service that users can log into and enter and retrieve data. When you think of users using CaseWorthy, they are using the application layer
+- CaseWorthy, the database
+  - The application layer of CaseWorthy interacts with the database layer to perform basic CRUD (Create, Retrieve, Update, Delete) operations. Operations performed on the application layer generate SQL code that interacts with the database. There is no way for HRDC users to directly interact with the database layer.
+- CaseWorthy, the corporation
+  - CaseWorthy is also a corporate entity that manages and maintains the application and database layers.
+
+CaseWorthy provides a full database backup on a nightly basis. These backups come in the form of a .bak file. You can find them under the HRDC Admin role, Administration tab, click-path shown below.
+
+![Database Backups](../Images/databasebackups.png)
+
+
+## SQL Server Management Studio (SSMS)
+
+You can interact with local database backups using SQL Server Management Studio (SSMS). [Download SSMS here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
+
+### Install a local SQL server
+
+The first step in working with a local backup is to [download and install SQL Server 2019](https://go.microsoft.com/fwlink/?linkid=866662). This local server will mimic the SQL server that lives in the CaseWorthy data center.
+
+
+### Connect via SSMS
+
+When you open SSMS it will prompt you to connect to a SQL database server. In our case the server will be the one you installed on the previous step.
+
+![Connect to local database](../Images/connectssms.JPG)
+
+
+
+### Restore database from .bak
+>>>>>>> Stashed changes
 
 ## [Structured Query Language (SQL)](sql.md)
 ## SQL Server Reporting Service (SSRS)
