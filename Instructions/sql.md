@@ -5,7 +5,7 @@
 1. [What is SQL](#what-is-sql)
 1. [Databases and Tables](#databases-and-tables)
 1. [Queries](#queries)
-1. [Database Backups](#database-backups)
+1. [Database Back-end](#database-back-end)
 1. [SQL Server Management Studio (SSMS)](#sql-server-management-studio)
 
 ## What is SQL?
@@ -30,7 +30,7 @@ The City column in the Person table has been replaced by a Foreign Key column th
 
 ## Queries
 
-## Database Backups
+## Database Back-end
 
 ### Layers of CaseWorthy
 
@@ -46,17 +46,32 @@ CaseWorthy provides a full database backup on a nightly basis. These backups com
 ![Database Backups](../Images/databasebackups.png)
 
 
-## SQL Server Management Studio
+## SQL Server Management Studio (SSMS)
 
-You can interact with local database backups using SQL Server Management Studio (SSMS).
+You can interact with local database backups using SQL Server Management Studio (SSMS). [Download SSMS here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15).
 
 ### Install a local SQL server
 
-The first step in working with a local backup is to [download and install SQL Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads). This local server will mimic the SQL server that lives in the CaseWorthy data center.
+The first step in working with a local backup is to [download and install SQL Server 2019](https://go.microsoft.com/fwlink/?linkid=866662). This local server will mimic the SQL server that lives in the CaseWorthy data center.
 
 
 ### Connect via SSMS
+
+When you open SSMS it will prompt you to connect to a SQL database server. In our case the server will be the one you installed on the previous step.
+
+![Connect to local database](../Images/connectssms.JPG)
+
+
+
 ### Restore database from .bak
+
+In the Object Explorer on the left, right click on "Databases" -- "Restore Database"
+
+![Object Explorer](../Images/objectexplorer.JPG)
+
+A new window will pop-up
+
+![Restore Database](../Images/restoredatabase.JPG)
 
 
 
