@@ -6,6 +6,7 @@ This is the central location for all the most up-to-date CaseWorthy Information.
 - [Data Entry Instructions](Instructions/universalintake.md)
 - Reporting Instructions
 - [System Administrator Information](Instructions/cwadmin.md)
+  - [CaseWorthy Common Errors](Instructions/CWcommonerrors.pdf)
 - [Homebuyer Education Online Registration](Instructions/onlineHBEregistration.md)
 - [Special Projects](Projects/projects.md)
 - Compliance Information
