@@ -7,6 +7,6 @@ This is the central location for all the most up-to-date CaseWorthy Information.
 - Reporting Instructions
 - [System Administrator Information](Instructions/cwadmin.md)
 - [Homebuyer Education Online Registration](Instructions/onlineHBEregistration.md)
-- <a href="Special%20Projects/Special%20Projects.md" target="_blank">Special Projects</a>
+- [Special Projects](Projects/projects.md)
 - Compliance Information
   - Who reports what to whom
