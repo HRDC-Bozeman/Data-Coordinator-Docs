@@ -29,7 +29,7 @@ CaseWorthy provides a full database backup on a nightly basis. These backups com
 ![Database Backups](../Images/databasebackups.png)
 
 
-## SQL Server Management Studio (SSMS)
+## SQL Server Management Studio
 
 You can interact with local database backups using SQL Server Management Studio (SSMS). 
 <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15" target="_blank">Download SSMS here</a>.
