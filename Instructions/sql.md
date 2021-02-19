@@ -69,9 +69,22 @@ In the Object Explorer on the left, right click on "Databases" -- "Restore Datab
 
 ![Object Explorer](../Images/objectexplorer.JPG)
 
-A new window will pop-up
+A new window will pop-up. 
 
-![Restore Database](../Images/restoredatabase.JPG)
+![Restore Database](../Images/restoredatabase.png)
+
+- Select the "Device" radio button under source
+- Click the "..."
+  - Click "Add"
+  - Browse your computer for the .bak file downloaded from CaseWorthy
+  
+Once you select the file some of the other fields are filled in. Click "OK" to proceed.
+
+![Ready to Restore](../Images/readytorestore.JPG)
+
+The database restoration may fail if there are any queries open that correspond to the database you are restoring. Usually closing SSMS and reopening will resolve these issues.
+
+
 
 
 
