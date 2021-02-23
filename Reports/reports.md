@@ -4,6 +4,7 @@
 
 ## Annual Utilization Report
 
+- [SQL Script](AUR/AUR2020.sql)
 - Reporting Period: Calendar Year
 - Programs
   - Warming Center
