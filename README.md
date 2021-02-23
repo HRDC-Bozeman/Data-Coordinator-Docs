@@ -4,7 +4,7 @@ This is the central location for all the most up-to-date CaseWorthy Information.
 
 - [Contribute to this documentation](Instructions/Contribute.md)
 - [Data Entry Instructions](Instructions/universalintake.md)
-- Reporting Instructions
+- [Reporting Instructions](Reports/reports.md)
 - [System Administrator Information](Instructions/cwadmin.md)
   - [CaseWorthy Common Errors](Instructions/CWcommonerrors.pdf)
 - [Homebuyer Education Online Registration](Instructions/onlineHBEregistration.md)
