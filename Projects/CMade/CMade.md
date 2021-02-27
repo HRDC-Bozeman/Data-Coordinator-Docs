@@ -1,9 +1,15 @@
+- [Documentation Home](../../README.md)
+- [Projects Home](../projects.md)
+
 # CounselorMax Automated Data Entry
 
 1. [Project Background](#project-background)
 1. [Form Filler](#form-filler)
 1. [Form Filler v2](#form-filler-v2)
-1. [Python](#python)
+1. [Components](#components)
+   1. [GSuite](#gsuite)
+   1. [Python](#python)
+   1. [Google Sheets API](#google-sheets-api)
 
 ## Project Background
 
@@ -61,26 +67,135 @@ These changes were made in conjunction with an update to the Google Form itself.
     
 ---
 
+## GSuite
+
+- [Google Form](https://docs.google.com/forms/d/1LaEelklJ9hcycyQM0MG33cmcyYuXHG61wcpaf9FsTkQ/edit)
+- [Response Spreadsheet](https://docs.google.com/spreadsheets/d/1ys_YjzH_HgeGxRcH9Nf_Q-Gg51209EjBI6ZMTvBxwVs/edit#gid=1001428010)
+
+The first step in the data entry process is getting user input through the Google Form. A generic copy of the form is linked above. Response information is stored in the response spreadsheet, also linked above with personal information redacted.
+
+---
+
 ## Python
 
-### `initialize_gspread()`
+This project uses 2 scripts written by me, and a number of external libraries. `driver.py` handles all of the interaction with GSuite and CounselorMax. `sqlGetter.py` is a utility script that creates a connection to a local database instance and allows the retrieval of records.
 
-Connects to the response spreadsheet and returns a gspread worksheet object containing the appointment data.
+### `driver.py`
 
-### `cmax_login()`
+#### `initialize_gspread()`
 
-Launches an Internet Explorer Selenium driver, logs into CounselorMax, and returns the driver object.
+- Parameters
+  - None
+- Return Value
+  - gspread worksheet object
 
-### `get_client_info(clientID)`
+This function handles the Google Sheets API authentication, as well as hard-coded values for the Google Sheets ID and worksheet name.
 
-### `get_records(sheet)`
+#### `get_records(sheet)`
 
-### `add_appts()`
+- Parameters
+  - `sheet`: gspread worksheet object
+- Return Value
+  - List of `dict`s
+  
+Looks through all records in the response spreadsheet. Returns records with 'Processed' == FALSE. Preserves the row number of each appended record.
 
-### `add_hud_appointment(driver, hud_data, sheet)`
 
-### `create_cmax_client(driver, demogs, appt)`
+#### `cmax_login()`
 
-### `fill_cmax_intake(driver, demogs, hud_data)`
+- Parameters
+  - None
+- Return Value
+  - Selenium IE driver object
+
+Launches an IE driver and logs into CounselorMax. Replace 'Your CounselorMax Username' and 'Your CounselorMax Password'. Returns the driver object
+
+#### `get_client_info(clientID)`
+
+- Parameters
+  - `clientID`: `int` or `str`
+- Return Value
+  - `dict`
+
+Uses `sqlGetter.py`, `clientdata.sql`, and Pandas to retrieve required client intake information from a SQL server instance. This query should only ever return one row since it is matching a unique client ID. The `record` will contain the following keys:
+
+- EntityID
+- LastName
+- FirstName
+- MiddleName
+- Gender
+- BirthDate
+- SSN
+- Race
+- Ethnicity
+- Address1
+- ZipCode
+- County
+- CellPhone
+- HomePhone
+- Email
+- VeteranStatus
+- PrimaryLanguage
+- Members
+- Prior Residence
+- Highest Grade Completed
+- Marital Status
+- Active Military
+- TotalIncome
+
+#### `add_hud_appointment(driver, hud_data, sheet)`
+
+- Parameters
+  - `driver`: Selenium IE driver object
+  - `hud_data`: `dict` of form response data
+  - `sheet`: gspread worksheet object
+- Return Value
+  - None
+  
+Uses the IE driver to fill out forms in CounselorMax to create a new appointment. Marks the row in the form response spreadsheet as 'Processed == TRUE'
+
+#### `create_cmax_client(driver, demogs, appt)`
+
+- Parameters
+  - `driver`: Selenium IE driver object
+  - `demogs`: `dict` of data pulled from CaseWorthy
+  - `appt`: `dict` of form response data
+- Return Value
+  - None
+
+Uses the IE driver to fill out forms in CounselorMax to create a new client.
+
+#### `fill_cmax_intake(driver, demogs, hud_data)`
+
+- Parameters
+  - `driver`: Selenium IE driver object
+  - `demogs`: `dict` of data pulled from CaseWorthy
+  - `appt`: `dict` of form response data
+- Return Value
+  - None
+  
+Uses the IE driver to fill out forms in CounselorMax to provide required intake information.
+
+#### `add_appts()`
+
+- Parameters
+  - None
+- Return Value
+  - None
+  
+This is the main algorithm that handles the CounselorMax data entry. It invokes all of the above functions to complete tasks. Starts with `initialize_gspread()`, `get_records(s)`, and `cmax_login()`. Goes through each of the form responses with a for loop. Inside the for loop it uses a series of if-elif-else statements to determine which steps need to be taken for each form response.
+
+---
+
+## Google Sheets API
+
+The interaction between Python and GSuite is facilitated by the Google Sheets API. You must enable and authorize the API before using it. Here are some resources on how to do that.
+
+- [Enable and disable APIs](https://support.google.com/googleapi/answer/6158841?hl=en)
+- [Google Sheets API Python Quickstart](https://developers.google.com/sheets/api/quickstart/python)
+- [gspread API guide](https://gspread.readthedocs.io/en/latest/oauth2.html)
+
+
+
 
 

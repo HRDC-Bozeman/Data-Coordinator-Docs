@@ -26,7 +26,9 @@ def initialize_gspread():
 	return ws
 
 
-# Logs into CounselorMax, pass an Internet Explorer webdriver as the parameter
+# Launches an IE driver and logs into CounselorMax
+# Replace 'Your CounselorMax Username' and 'Your CounselorMax Password'
+# Returns the driver object
 def cmax_login():
 	driver = webdriver.Ie()
 	driver.get('https://counselormax.net/login.asp')
@@ -35,8 +37,8 @@ def cmax_login():
 	login = driver.find_element_by_name('txtUserName')
 	pw = driver.find_element_by_name('txtUserPass')
 	submit = driver.find_element_by_name('Submit')
-	login.send_keys(**Your CounselorMax Username**)
-	pw.send_keys(**Your CounselorMax Password**)
+	login.send_keys('Your CounselorMax Username')
+	pw.send_keys('Your CounselorMax Password')
 	submit.send_keys(Keys.RETURN)
 	time.sleep(1)
 
@@ -55,6 +57,7 @@ def cmax_login():
 	return driver
 
 
+# 
 def get_client_info(clientID):
 	with open('clientdata.sql', 'r') as file:
 		sql = file.read()
@@ -62,7 +65,9 @@ def get_client_info(clientID):
 	sql = sql.replace('**ClientID**', str(clientID))
 
 	raw = pd.read_sql_query(sql,cnxn)
-	return raw.to_dict(orient='records')[0]
+
+	record = raw.to_dict(orient='records')[0]
+	return record
 
 
 def get_records(sheet):

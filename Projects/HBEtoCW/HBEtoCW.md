@@ -1,3 +1,6 @@
+- [Documentation Home](../../README.md)
+- [Projects Home](../projects.md)
+
 # Homebuyer Education Online Registration to CaseWorthy Connection
 
 - [Homebuyer Education Online Registration Documentation](../../Instructions/onlineHBEregistration.md)
