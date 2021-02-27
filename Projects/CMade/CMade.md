@@ -54,7 +54,7 @@ These changes were made in conjunction with an update to the Google Form itself.
       - No, create case then add appointment
       - Mark record as processed in original response spreadsheet
   - If they are not in CounselorMax
-    - Pull data from CaseWorthy via [`sqlgetter.py`](sqlgetter.py) and [`clientdata.sql`](clientdata.sql) (virtually instantaneous...)
+    - Pull data from CaseWorthy via [`sqlgetter.py`](sqlGetter.py) and [`clientdata.sql`](clientdata.sql) (virtually instantaneous...)
     - Create new client and case based on CaseWorthy information
     - Add appointment
     - Mark record as processed in original response spreadsheet
