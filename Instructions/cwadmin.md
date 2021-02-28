@@ -12,6 +12,7 @@ This page will outline some of the basics of the day-to-day administration of Ca
 1. SQL Server Management Studio (SSMS)
 1. [Structured Query Language (SQL)](sql.md)
 1. SQL Server Reporting Service (SSRS)
+1. [`sqlGetter.py`](#sqlgetter.py)
 
 ---
 ---
@@ -91,6 +92,51 @@ The first step in working with a local backup is to [download and install SQL Ex
 ## SQL Server Reporting Service (SSRS)
 
 
+## `sqlGetter.py`
+
+`sqlGetter.py` is a short Python script that allows you to access a local database instance through Python. To best use this tool, put this script in the same folder as the other Python script that is going to use it. Import the script using `from sqlGetter import *`. This will cause the whole script to run, which automatically establishes a connection to the database of your choice, and provides you with the `cnxn` object and the `pandize_data(query)` function.
+
+Below is the script in it's entirety. To make it work on your local machine you will have to set `server` to the name of your local [SQL server]:
+
+```python
+import pyodbc
+import pandas as pd
+
+server = 'YOUR SQL SERVER'
+database = 'HRDC09_Prod'
+
+def connect(server, database):
+	cnxn = pyodbc.connect('Trusted_Connection=Yes;DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database)	
+	print('Connection to {} established on {}'.format(database,server))
+	return cnxn	
+
+
+def pandize_data(query):
+	path = query+'.sql'
+	with open(path, 'r') as file:
+		sql = file.read()
+	return pd.read_sql_query(sql,cnxn)
+
+cnxn = connect(server, database)
+
+```
+
+### `connect(server, database)`
+
+- Parameters
+  - `server`: str
+  - `database`: str
+- Return Value
+  - `cnxn`: pyodbc connection object
+
+
+### `pandize_data(query)`
+
+- Parameters
+  - `query`: `str`,the name of the query to be used without the file suffix
+    - e.g. `'clientdata'`
+- Return Value
+  - pandas dataframe object
 
 
 

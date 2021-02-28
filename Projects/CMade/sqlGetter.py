@@ -1,12 +1,8 @@
 import pyodbc
 import pandas as pd
 
-
 server = 'YOUR SQL SERVER'
 database = 'HRDC09_Prod'
-
-
-
 
 def connect(server, database):
 	cnxn = pyodbc.connect('Trusted_Connection=Yes;DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database)	
