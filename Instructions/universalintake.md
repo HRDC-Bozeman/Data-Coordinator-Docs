@@ -203,8 +203,26 @@ You can create a new assessment from the assessment summary form by clicking the
 ## Case Management Tools 
 [\[Back to Top\]](#table-of-contents)
 
-- Case Notes
-- Services
+### Case Notes
+
+Case notes can be accessed through the Case Management menu on the left-nav bar. The [case note summary]() form displays all the case notes for the active client. You can filter which types of case notes are displayed. You can select one or more case notes using the checkboxes on the left side, and click print selected to export all of them into a single document. Click "Add New" in the upper right corner to create a new case note.
+
+![Case Note Summary](../Images/casenotesummary.png)
+
+---
+
+### Services
+
+There are two places to access a client's service history. If you click the family drop-down arrow in the top-left, it will reveal the demographics and services buttons. You can also find it in the Case Management menu on the left-nav bar.
+
+![Places to access the service summary](../Images/services.png)
+
+Both of these buttons will take you to the [Services Summary](../Forms/1000000252.md) form. This form displays one row for each service received by the client. The columns display the date of the service, the program providing the service, the service type, the service total, and which user entered the service. In the upper right corner of the form there is a link that allows you to add new services.
+
+![Service Summary Form](../Images/servicesummary.png)
+
+Clicking the "+ Add New" button brings you to the [Add Services - Universal Intake](../Forms/1000000231.md) form. The program drop down lets you choose which program to provide the service under. Once a program is selected, the service types available to that program will be displayed. Check the checkbox on the left to provide that type of service. Provide the start date, end date, and service quantity. Only one service per service type can be added on one form submission. Submit the form and reload it to give multiple services of the same type.
+
 - Alerts
 - Documents
 - Program Enrollment
