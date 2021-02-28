@@ -2,12 +2,13 @@
 
 This is the central location for all the most up-to-date CaseWorthy Information. It's still new and incomplete, but eventually this repository will contain
 
-- Data Entry Instructions
-  - [Housing](Instructions/HousingDataEntryInstructions.md)
-- Reporting Instructions
-  - CaseWorthy
-  - [CDS](Instructions/CDSInstructions.md)
-- System Administrator Information
-  - Detailed information about all CaseWorthy database objects
+
+- [Contribute to this documentation](Instructions/Contribute.md)
+- [Data Entry Instructions](Instructions/universalintake.md)
+- [Reporting Instructions](Reports/reports.md)
+- [System Administrator Information](Instructions/cwadmin.md)
+  - [CaseWorthy Common Errors](Instructions/CWcommonerrors.pdf)
+- [Homebuyer Education Online Registration](Instructions/onlineHBEregistration.md)
+- [Special Projects](Projects/projects.md)
 - Compliance Information
   - Who reports what to whom

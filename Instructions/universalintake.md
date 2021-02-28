@@ -1,6 +1,8 @@
 [Documentation Home](../README.md)
 
-# Housing Data Entry Instructions
+# CaseWorthy Data Entry Instructions
+
+This page will hold all of the generalized universal intake instructions. Other pages will go into program specifics if needed.
 
 ## Table of Contents
 
@@ -10,6 +12,7 @@
 1. [Basic Navigation](#basic-navigation)
 1. [Finding Clients](#finding-clients)
 1. [Brand New Clients](#brand-new-clients)
+   1. [Additional Programs](#additional-programs) 
 1. [Existing Clients](#existing-clients)
 1. [Assessments](#assessments)
    1. Updating Client Assessments
@@ -99,15 +102,6 @@ You should always search in at least two different ways, but possibly more if th
 ## Brand New Clients 
 [\[Back to Top\]](#table-of-contents)
 
-The intake process for brand new clients has a few basic components. 
-
-- Collect Demographic information about the family/household
-  - This includes names, DOBs, address history, race/ethnicity, etc.
-- Begin their program enrollment with HRDC (Universal Intake) and with the housing programs (Home to Stay)
-- Collect required intake data
-  - This includes information on housing, employment, health insurance, etc.
-
-The step-by-step below covers all the steps in detail
 ### Step-by-Step
 To create a new client in CaseWorthy click the "Intake: Brand New Clients" button on the left navigation bar. This will start a new workflow, which is a series of forms that gather the required information about the client and their interactions with HRDC. Each of the list items below represents an individual form.
 
@@ -134,20 +128,30 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
 - Once the enrollment is created and all the members are added, the workflow creates an <a href="Objects/Assessment.md" target="_blank">Assessment</a> for each client. The first set of forms you complete will collect Universal Intake data. These are data points that are required by all HRDC programs, including all the housing programs. 
     - The [HUD Assessment](../Forms/1000000248.md) collects data on things like housing status, non-cash benefits received, employment status, and more. You will have to complete the HUD Assessment for each enrolled member, but not all family members will be asked the same questions. 
     - The [Financial Assessment](../Forms/1000000145.md) collects data on household income and its sources. Check each row that applies, enter the amount, and the interval. There are additional fields to record how and when the data was verified, but they are not required.
- - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?" Say yes to enroll the household in the housing programs.
+    
+### Additional Programs
+
+ - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?" Select "Yes" if you are enrolling a client into housing, homemaker, senior reach, or senior groceries. Some housing programs require additional assessment data for funding and compliance purposes. The supplemental enrollment allows CaseWorthy to record those data. Homemaker, Senior Reach, and Senior Groceries use the program attendance feature, which allows services to be added for multiple clients at the same time.
+
+![Additional Enrollments?](../Images/additionalprograms.JPG)
+
+
  
- ![Additional Enrollments?](../Images/additionalprograms.jpg)
- 
- - On the [Enrollment Add/Edit](../Forms/1000000030.md) form select "Home to Stay" under Program and use the same Program Entry Date that you used for the initial enrollment.
+ - On the [Enrollment Add/Edit](../Forms/1000000030.md) form select the additional program under the Program dropdown and use the same Program Entry Date that you used for the initial enrollment.
  - You will have to select which family members to enroll again on the [Enrollment Members](../Forms/1000000259.md) form.
- - You will again be asked if you want to complete assessments, say yes. This will create a new set of [Assessments](../Objects/Assessment.md) that will be tied to the housing enrollment. A lot of the data needed for housing overlaps with the data collected for the Universal Intake, but there are a few extra items that need to be added.
- - You should be given the option to Copy Assessments. This will fill in all the data that you already entered for the Universal Intake.
-     - The [HUD Assessment](../Forms/1000000248.md) may ask for additional data depending on the family.
-     - The [Chronic Homelessness](../Forms/1000000262.md) collects more detailed information about the housing status of each family member. Data entered on this form determines if a client meets the HUD definition for chronic homelessness.
-     - There are no additional questions on the [Financial Assessment](../Forms/1000000145.md), but you may be prompted to enter data on additional family members.
- - This is the end of the workflow. Click "Done" when you are finished reviewing the summary of the forms you filled out.
+ - You will again be asked if you want to complete assessments, say yes. This will create a new set of [Assessments](../Objects/Assessment.md) that will be tied to the additional program enrollment.
+ - You may be given the option to Copy Assessments. This will fill in all the data that you already entered for the Universal Intake.
  
- ![Workflow Summary](../Images/workflowsummary.JPG)
+ #### Housing
+ 
+ - The [HUD Assessment](../Forms/1000000248.md) may ask for additional data depending on the family.
+ - The [Chronic Homelessness](../Forms/1000000262.md) collects more detailed information about the housing status of each family member. Data entered on this form determines if a client meets the HUD definition for chronic homelessness.
+ - There are no additional questions on the [Financial Assessment](../Forms/1000000145.md), but you may be prompted to enter data on additional family members.
+ 
+ #### Homemaker, Senior Reach, Senior Groceries
+ 
+ These programs only collect data from the HUD Assessment and the Financial Assessment. There are no additional program specific data points.
+
 
 ---
 ---
@@ -157,14 +161,12 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
 
 If you need to enroll a client or family that already exists in CaseWorthy the process is much simpler. Click the "Intake: Existing Clients" button on the left navigation bar. This launches a shorter workflow that focuses on enrollment and assessment data, and skips collecting some of the more general client demographics.
 
-1. On the [Enrollment Add/Edit](../Forms/1000000030.md) form select "Home to Stay" under Program and enter the Program Entry date.
+1. On the [Enrollment Add/Edit](../Forms/1000000030.md) form select the program you are enrolling them in.
 1. Select which family members to enroll on the [Enrollment Members](../Forms/1000000259.md) form.
-1. At this point you will be asked: "Complete assessments at this time?" If you have recent data available (which you should for a brand new client) you should say yes. You have the option of saying no and skipping the remaining steps of the intake, but this option should only be used if the complete data is not available and we need some sort of client record in the system. This will leave the enrollment status as "Assessments Pending". To complete them go to the [Program Enrollment](../Forms/1000000266.md) form, and click on the assessments pending link. already entered for the Universal Intake.
-1. Once the enrollment is created and all the members are added, the workflow creates an <a href="Objects/Assessment.md" target="_blank">Assessment</a> for each family member. 
-   - The [HUD Assessment](../Forms/1000000248.md) collects data on things like housing status, non-cash benefits received, employment status, and more. You will have to complete the HUD Assessment for each enrolled member, but not all family members will be asked the same questions. 
-   - The [Financial Assessment](../Forms/1000000145.md) collects data on household income and its sources. Check each row that applies, enter the amount, and the interval. There are additional fields to record how and when the data was verified, but they are not required.
-   - The [Chronic Homelessness](../Forms/1000000262.md)" collects more detailed information about the housing status of each family member. Data entered on this form determines if a client meets the HUD definition for chronic homelessness.
-1. This is the end of the workflow. Click "Done" when you are finished reviewing the summary of the forms you filled out.
+1. At this point you will be asked: "Complete assessments at this time?" If you have recent data available you should say yes. You have the option of saying no and skipping the remaining steps of the intake, but this option should only be used if the complete data is not available and we need some sort of client record in the system. This will leave the enrollment status as "Assessments Pending". To complete them go to the [Program Enrollment](../Forms/1000000266.md) form, and click on the assessments pending link. already entered for the Universal Intake.
+1. Once the enrollment is created and all the members are added, the workflow creates an <a href="Objects/Assessment.md" target="_blank">Assessment</a> for each family member. The required assessments will vary based on the program.
+   
+1. The workflow ends when all of the assessments are completed. Click "Done" when you are finished reviewing the summary of the forms you filled out.
 
 ---
 ---
@@ -173,6 +175,10 @@ If you need to enroll a client or family that already exists in CaseWorthy the p
 [\[Back to Top\]](#table-of-contents)
 
 An Assessment is simply a collection of data made by a specific program on a specific date. The assessments that you completed as part of the intake process are known as "At Entry" assessments, but there are also "During", "At Exit", and "Annual" assessments. To review a client's assessment history use the [Assessment Summary](../Forms/1000000256.md) form from the left navigation bar. This form displays the date of the assessment, the assessment type, who collected the information, and for which program it was collected. Clicking the Action Gear on a row will allow you to review responses to specific assessment questions.
+
+- The [HUD Assessment](../Forms/1000000248.md) collects data on things like housing status, non-cash benefits received, employment status, and more. You will have to complete the HUD Assessment for each enrolled member, but not all family members will be asked the same questions. 
+- The [Financial Assessment](../Forms/1000000145.md) collects data on household income and its sources. Check each row that applies, enter the amount, and the interval. There are additional fields to record how and when the data was verified, but they are not required.
+- The [Chronic Homelessness](../Forms/1000000262.md)" collects more detailed information about the housing status of each family member. Data entered on this form determines if a client meets the HUD definition for chronic homelessness.
 
 ### Updating Client Assessments
 
@@ -196,14 +202,6 @@ You can create a new assessment from the assessment summary form by clicking the
   
 ## Case Management Tools 
 [\[Back to Top\]](#table-of-contents)
-
-There are a bunch of tools under the Case Management menu on the left-navigation bar.
-
-### Document Upload
-
-Click Documents to view uploaded files. Click "+ Add New" to upload a new document. Check the appropriate row for the document type you are uploading. Click "Browse" to upload the file from your computer.
-
-![Document Upload](../Images/documentupload.jpg)
 
 - Case Notes
 - Services
