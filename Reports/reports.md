@@ -4,6 +4,7 @@
 - [CSBG Data Entry Worksheet](#csbg-data-entry-worksheet)
 - [Food Bank Clients Served](#food-bank-clients-served)
 - [Senior Clients Income Report](#senior-clients-income-report)
+- [Warming Center Monthly Comparison](#warming-center-monthly-comparison)
 
 ## Annual Utilization Report
 
@@ -95,3 +96,15 @@ This report generates the average reported income of HRDC's senior clients. It g
   - Average Monthly Income
   - Clients who had data collected
   - Clients who did not have data collected
+
+## Warming Center Monthly Comparison
+
+- [SQL Query](warming_center/wc_monthly_comparison.sql)
+- Data Points
+  - Total services provided by year and month
+  - Unique clients by year and month
+  - Client demographics
+    - Gender
+    - Age range
+  - Nights per guest
+  - Guests per night
