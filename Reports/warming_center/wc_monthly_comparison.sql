@@ -49,12 +49,13 @@ FROM Service S
 		ON A.AccountID = S.AccountID
 	INNER JOIN Client C
 		ON C.EntityID = S.ProvidedToEntityID
-WHERE A.AccountName LIKE 'Warming%'
+WHERE A.AccountName = 'Warming Center'
 	  AND ST.Description IN ('Emergency Temporary Shelter', 'WC-Motel/Hotel')
-      AND S.BeginDate BETWEEN '02/01/2020' AND '02/29/2020'
+      AND S.BeginDate BETWEEN '02/01/2020' AND '02/28/2020'
 	  AND S.DeletedDate > GETDATE()
 GROUP BY S.BeginDate
 )
 
-SELECT AVG(Stays)
+SELECT Night, SUM(Stays)
 FROM CTE
+GROUP BY Night
