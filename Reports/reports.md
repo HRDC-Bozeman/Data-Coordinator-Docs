@@ -1,6 +1,7 @@
 # Reporting Documentation
 
 - [Annual Utilization Report](#annual-utilization-report)
+- [Covid-19 Vaccine Outreach](#covid-19-vaccine-outreach)
 - [CSBG Data Entry Worksheet](#csbg-data-entry-worksheet)
 - [Food Bank Clients Served](#food-bank-clients-served)
 - [Senior Clients Income Report](#senior-clients-income-report)
@@ -37,6 +38,24 @@ Subset of required data point for the annual utilization report. Not all of the 
     - Multiracial
     - Hispanic
     - Non-hispanic
+
+## Covid-19 Vaccine Outreach
+
+This is a report that pulls potential leads out of CaseWorthy, along with contact information and the date of the client's last interaction with HRDC
+
+- [SQL Script](covid_outreach/CovidVaccineOutreach.sql)
+- Data Points
+  - Client ID
+  - Family ID
+  - Name
+  - Contact Information
+  - Address
+  - Age
+  - Disabling Condition
+  - Race
+  - Last Staff Contact
+  - Last Contact Date
+  - Last Contact Program
 
 ## CSBG Data Entry Worksheet
 
