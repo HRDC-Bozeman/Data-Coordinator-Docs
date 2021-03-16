@@ -9,6 +9,7 @@ This is the central location for all the most up-to-date CaseWorthy Information.
 - [Reporting Instructions](Reports/reports.md)
 - [System Administrator Information](Instructions/cwadmin.md)
   - [CaseWorthy Common Errors](Instructions/CWcommonerrors.pdf)
+  - [Data Coordinator Software Guide](Instructions/DCsoftware.md)
 - [Homebuyer Education Online Registration](Instructions/onlineHBEregistration.md)
 - [Special Projects](Projects/projects.md)
 - Compliance Information
