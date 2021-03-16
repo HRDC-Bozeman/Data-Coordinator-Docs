@@ -49,7 +49,7 @@ WHERE --P.ProgramName LIKE 'Homemaker%'
 	  --OR P.ProgramName LIKE 'CFSP'
 	   -- These are the filters for 80+, or 70+ & Disabled, or black or native American
 	   
-	   (dbo.ufn_ClientAge(C.BirthDate, GETDATE()) > 60 AND dbo.ufn_ClientAge(C.BirthDate, GETDATE()) < 75)
+	   (dbo.ufn_ClientAge(C.BirthDate, GETDATE()) > 60 AND dbo.ufn_ClientAge(C.BirthDate, GETDATE()) < 71)
 	   -- OR 
 	  AND NOT (dbo.ufn_ClientAge(C.BirthDate, '01/01/2020') > 70 AND Assess.[Disabling Condition] = 1)
 	   -- OR
@@ -57,7 +57,6 @@ WHERE --P.ProgramName LIKE 'Homemaker%'
 	  
 	  AND (NULLIF(ECP.HomePhone, '') IS NOT NULL OR NULLIF(ECP.WorkPhone, '') IS NOT NULL OR NULLIF(ECP.CellPhone, '') IS NOT NULL OR NULLIF(ECP.Email, '') IS NOT NULL)
 	  AND CSI.DateOfDeath IS NULL
-	  AND CA.County = 'Meagher'
 ORDER BY [Date] DESC
 
 --SELECT * FROM ClientAddress
