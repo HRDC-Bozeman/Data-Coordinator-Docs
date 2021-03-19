@@ -5,6 +5,7 @@
 
 - [Homebuyer Education Online Registration Documentation](../../Instructions/onlineHBEregistration.md)
 - [SQL Documentation](../../Instructions/sql.md)
+- [CounselorMax Automated Data Entry](../Cmade/Cmade.md)
 
 ## Project Background
 

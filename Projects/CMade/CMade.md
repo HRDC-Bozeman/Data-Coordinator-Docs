@@ -6,6 +6,7 @@
 1. [Project Background](#project-background)
 1. [Form Filler](#form-filler)
 1. [Form Filler v2](#form-filler-v2)
+2. [Homebuyer Education Data Entry](#homebuyer-education-data-entry)
 1. [Components](#components)
    1. [GSuite](#gsuite)
    1. [Python](#python)
@@ -65,6 +66,20 @@ These changes were made in conjunction with an update to the Google Form itself.
     - Add appointment
     - Mark record as processed in original response spreadsheet
     
+---
+
+## Homebuyer Education Data Entry
+
+Another program that is required to use CounselorMax is Homebuyer Education, but their data entry workflow is slightly different. In this section I will outline how data is entered for Homebuyer Ed, and I will cover the additional Python/Selenium functionality required.
+
+### Data Entry Steps
+
+1. Create a new client
+2. Intake
+3. Enroll in Class
+4. Attend Class
+5. Change Service Type
+6. Document Upload
 ---
 
 ## GSuite
