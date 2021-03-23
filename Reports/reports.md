@@ -4,6 +4,7 @@
 - [Covid-19 Vaccine Outreach](#covid-19-vaccine-outreach)
 - [CSBG Data Entry Worksheet](#csbg-data-entry-worksheet)
 - [Food Bank Clients Served](#food-bank-clients-served)
+- [Impact Report](#impact-report)
 - [Senior Clients Income Report](#senior-clients-income-report)
 - [Warming Center Monthly Comparison](#warming-center-monthly-comparison)
 
@@ -104,6 +105,16 @@ The Food Bank needs a custom report to get an accurate count of unique clients s
     - Age
     - Gender
     - County of Residence
+
+
+## Impact Report
+
+The Impact Report is a collection of information that HRDC releases to the public which outlines the overall impact and reach of HRDC services. 
+
+### 2020
+
+[Impact Report Numbers - 2020](https://docs.google.com/spreadsheets/d/1Xc82BEPn5rdYI0QG38aBX7ItpkQj7IaweQZW00kkCtw/edit#gid=0) (you may have to request access to this file)
+
 
 
 ## Senior Clients Income Report
