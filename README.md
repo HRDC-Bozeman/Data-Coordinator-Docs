@@ -14,4 +14,4 @@ This is the central location for all the most up-to-date CaseWorthy Information.
 - [Homebuyer Education Online Registration](Instructions/onlineHBEregistration.md)
 - [Special Projects](Projects/projects.md)
 - Compliance Information
-  - Who reports what to whom
+  - [HUD 9902 Data Entry and Reporting Instructions](Instructions/HUDinstructions.pdf)
