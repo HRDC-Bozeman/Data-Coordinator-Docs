@@ -8,27 +8,40 @@ from datetime import datetime
 
 hrdcdb = Connection('ARES-IV\\SQLEXPRESS','HRDC09_Prod')
 
-om = hrdcdb.pandize_data('OM_Scores')
-# print(om.info())
-# clients = list(set(list(om.EntityID)))
-om.Date = pd.to_datetime(om.Date, errors = 'coerce')
 
-om.set_index(['Date'], inplace = True)
+def import_om_data():
+	om = hrdcdb.pandize_data('OM_Scores')
+	# print(om.info())
+	# clients = list(set(list(om.EntityID)))
+	om.Date = pd.to_datetime(om.Date, errors = 'coerce')
 
-om = om.loc['2010-01-01':'2021-12-31']
+	om.set_index(['Date'], inplace = True)
 
-domains = ['Education'
-			, 'Employment'
-			, 'Housing'
-			, 'Income'
-			, 'Transportation'
-			, 'Childcare'
-			, 'Food Security'
-			, 'Health Care/Services'
-			, 'Nutrition'
-			, 'Financial Literacy']
+	om = om.loc['2010-01-01':'2021-12-31']
 
-om = om[om.Domain.isin(domains)]
+	domains = ['Education'
+				, 'Employment'
+				, 'Housing'
+				, 'Income'
+				, 'Transportation'
+				, 'Childcare'
+				, 'Food Security'
+				, 'Health Care/Services'
+				, 'Nutrition'
+				, 'Financial Literacy']
+
+	om = om[om.Domain.isin(domains)]
+	return om
+
+def import_service_data():
+	services = hrdcdb.pandize_data('Services')
+	services.Date = pd.to_datetime(services.Date, errors = 'coerce')
+	services.set_index(['Date'], inplace = True)
+	services = services.loc['2010-01-01':'2021-12-31']
+	services.to_csv('services.csv')
+	return services
+
+
 
 # for d in domains:
 # 	domain = om[om.Domain == d]
@@ -45,7 +58,7 @@ om = om[om.Domain.isin(domains)]
 # Find changes in scores over time
 def calculate_deltas(om):
 	start_time = datetime.now()
-	print(start_time)
+	print(f'Start time: {start_time}')
 	diff_list = []
 	for e in om.EntityID.unique():
 		client_data = om[om.EntityID == e]
@@ -65,11 +78,49 @@ def calculate_deltas(om):
 			diff_list.append(diff_data)
 	final_data = pd.concat(diff_list)
 	end_time = datetime.now()
-	print(f'{end_time}\nTime elapsed: {end_time - start_time}')
+	print(f'End time: {end_time}\nTime elapsed: {end_time - start_time}')
 	final_data.to_csv('om_deltas.csv')
 	return final_data
 
+def calculate_client_deltas(df):
+	# print(df.iloc[0].EntityID)
+	return df.groupby('Domain').apply(func = calculate_domain_deltas)
 
-data = calculate_deltas(om)
-# data = pd.read_csv('om_deltas.csv')
+def calculate_domain_deltas(df):
+	# print(df.iloc[0].Domain)
+	# print(df)
+	try:
+		delta = df.Score.diff().rename('Delta')
+		# df['date_index'] = df.index
+		df = df.reset_index()
+		df['LastScoreDate'] = df.Date.shift()
+		delta = delta.reset_index()
+		df = pd.concat([df, delta], axis = 1)
+	except ValueError:
+		code.interact(local = locals())
+	return df
+
+def pivot_domains(df):
+	# print(df)
+	try:
+		scores = df.pivot(index = 'date_index', columns = 'Domain', values = 'Score')
+		deltas = df.pivot(index = 'date_index', columns = 'Domain', values = 'Delta')
+		deltas.columns = deltas.columns.values + '_d'
+		combined = pd.merge(scores, deltas, left_index = True, right_index = True)
+	except ValueError:
+		return None
+	return combined
+
+def speed_test(raw):
+	start_time = datetime.now()
+	deltas = raw.groupby('EntityID').apply(func = calculate_client_deltas)
+	# result = deltas.groupby('EntityID').apply(func = pivot_domains)
+	end_time = datetime.now()
+	print(f'Time elapsed: {end_time - start_time}')
+	return deltas
+
+
+# data = calculate_deltas(om)
+om = import_om_data()
+df = speed_test(om)
 code.interact(local = locals())
