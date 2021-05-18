@@ -81,11 +81,27 @@ To analyze the efficacy of HRDC services I will combine the OM and Service data.
 ## Data Processing ([data_processing.py](data_processing.py))
 
 1. Make connection to local sql server
-1. Pull data using `pandize_data()`
-1. Convert date column to correct format
-1. Set data frame index to date column
-1. 
+1. Pull data using `pandize_data()`. Alternately pull from saved .csv files.
+1. Convert date columns to correct format
+1. Index observations by date and EntityID
+1. For each client and outcome domain, calculate the change in score from the last assessment.
+1. For each client and outcome date, pivot the outcome scores to a single row with columns for each domain and change in domain score (e.g. `Housing` and `Housing_d`). At this point we have a data set that resembles this:
 
+| EntityID | Date       | Housing | Housing_D | ... | LastScoreDate |
+|----------|------------|---------|-----------|-----|---------------|
+| 12345    | 01/12/2018 | 3       | NaN       | ... | NaT           |
+|          | 03/05/2019 | 8       | 5         | ... | 01/12/2018    |
+| 23456    | 01/01/2016 | 4       | NaN       | ... | NaT           |
+| 78942    | 01/03/2017 | 5       | NaN       | ... | NaT           |
+|          | 07/09/2020 | 3       | -2        | ... | 01/03/2017    |
+
+This is the basis of any outcome matrix analysis. Other client data can be incorporated by joining on `EntityID`. 
+
+- Other Client Data
+  - Services
+  - Assessments
+  - Demographics
+  - 
 
 
 
