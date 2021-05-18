@@ -12,6 +12,12 @@
 
 The Outcome Matrix is a data collection tool that measures the overall well-being of a family across multiple dimensions. These dimensions inlcude things like food security, housing, and access to transportation. HRDC has been collecting Outcome Matrix data for several(?) years.
 
+### Questions To Ask
+
+1. There is an apparent increase in volatility in the housing scores starting in 2020. What is causing this? It could be an actual increase in housing instability in the community, or an artifact of the data, specifically a smaller sample of scores. 
+1. How do various services correlate with changes in outcome scores? The first hypothesis I want to test is that case management services are correlated with increases in housing outcome scores. In the future I want to add controls for other factors that may also be correlated with receiving case management services and changes in housing scores. The most obvious omitted variable in this case is a person's own internal drive to better their own situation. This is obviously impossible to measure directly, especially at the scale that would be required for this analysis. 
+1. What are some proxy variables that are more closely correlated with 'internal drive'? Frequency of case management services may be a good indicator.
+
 ## Data Overview
 
 ### Outcome Matrix ([OM_Scores.sql](OM_Scores.sql))
