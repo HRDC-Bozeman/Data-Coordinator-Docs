@@ -97,6 +97,7 @@ def pivot_services(row, services = services):
 		# Calculate sum service totals by service type
 		# This returns a pd.Series
 		sums = time_frame.groupby('Description')['Total'].agg(sum) # Sum of service totals by service type
+		sums.rename(lambda x: x.replace(' ','_').replace('-','_').replace('/','_')+'_s', inplace = True)
 		# Since row is also a pd.Series, they can just be stuck together
 		with_totals = pd.concat([row,sums])
 		# Rename the new series to match the original row name
@@ -128,8 +129,9 @@ def speed_test(raw):
 # om = import_om_data()
 # df = speed_test(om)
 om = import_final_om()
-serv = om.apply(pivot_services, axis = 1)
-data = pd.merge(om, serv, how = 'outer')
+data = om.apply(pivot_services, axis = 1)
+data.to_csv('om_and_services.csv')
+# data = pd.merge(om, serv, how = 'outer')
 # data = pd.read_csv('test_sample.csv')
 code.interact(local = locals())
 
