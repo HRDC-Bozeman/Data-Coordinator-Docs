@@ -125,14 +125,21 @@ def speed_test(raw):
 	return deltas
 
 
+def import_final_dataset():
+	data = pd.read_csv('om_and_services.csv')
+	data.drop(columns = ['Unnamed: 0'], inplace = True)
+	return data
+
+
 # data = calculate_deltas(om)
 # om = import_om_data()
 # df = speed_test(om)
-om = import_final_om()
-data = om.apply(pivot_services, axis = 1)
-data.to_csv('om_and_services.csv')
+# om = import_final_om()
+# data = om.apply(pivot_services, axis = 1)
+# data.to_csv('om_and_services.csv')
 # data = pd.merge(om, serv, how = 'outer')
 # data = pd.read_csv('test_sample.csv')
+data = import_final_dataset()
 code.interact(local = locals())
 
 
