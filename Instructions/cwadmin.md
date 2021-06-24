@@ -38,18 +38,27 @@ Once an employee leaves HRDC, their CaseWorthy privileges should be immediately 
 
 Sometimes clients need to be moved to different households. This section will cover the procedure for creating new households, moving clients into new households, and moving clients into existing households.
 
-- Close all open program enrollments for the client being moved using the .
-  - Identify which enrollments need to be closed using the [Program Enrollment](..Forms/1000000266.md) form.
-  - Click path: Left-Nav bar - Case Management - Program Enrollment
-  - Close open enrollments using the [Add/Edit Members](../Forms/Baseline49.md) form.
-    - Change date from "Open" to the appropriate ending date.
-    - Click path: Action gear - Member - "+ Add/Edit Members"
 - View client family history with the [Client Families](../Forms/1000000048.md) form. Each row represents a family that this client has been a member of.
 
 ![Client Family History](../Images/clientfamilyhistory.png)
 
-- If the client needs to go into a new family you can create it with the [ADMIN ONLY - Create a New Family](../Forms/1000000202.md) form
-- If the client is moving into an existing family pull up the file of the HoH of the family that the client is moving into. Add the client using the [Add Family Member Spreadsheet](../Forms/Baseline7114.md).
+- Determine if the client needs to be moved into a new family or an existing family
+  - For a new family use the [ADMIN ONLY - Create a New Family](../Forms/1000000202.md) form
+  - For an existing family
+    - Look up the head of household of the new family
+    - Use the [Add Family Member Spreadsheet](../Forms/Baseline7114.md) on the left-nav bar to add the new family member
+- Determine if any enrollments need to be transferred to the new family. Transfer enrollments when the client(s) moving to the new family is (are) the only enrollment member(s)
+  - Transfer these enrollments to the new family ID using the [Edit Enrollment - Admin](../Forms/1000000111.md)
+  
+  
+  
+  
+- Remove the client from program enrollments that are not being transferred using the [Program Enrollment](..Forms/1000000266.md) and [Add/Edit Members](../Forms/Baseline49.md) forms.
+  - Change date from "Open" to the appropriate ending date.
+  - Click path: Action gear - Member - "+ Add/Edit Members"
+
+
+
 - If the client is moving back into an old family you can simply change the date added on that row to the appropriate date, and change the date removed to "Open".
 
 In most cases, a client should only be in one family at a time. Make sure that the date added to the new family is the same as the date removed from the old family. The most notable exception to this is children in a joint custody situation. 
@@ -68,32 +77,51 @@ In most cases, a client should only be in one family at a time. Make sure that t
 
 ## `sqlGetter.py`
 
-`sqlGetter.py` is a short Python script that allows you to access a local database instance through Python. To best use this tool, put this script in the same folder as the other Python script that is going to use it. Import the script using `from sqlGetter import *`. This will cause the whole script to run, which automatically establishes a connection to the database of your choice, and provides you with the `cnxn` object and the `pandize_data(query)` function.
-
-Below is the script in it's entirety. To make it work on your local machine you will have to set `server` to the name of your local [SQL server]:
+`sqlGetter.py` is a module that allows you to establish a connection to a database and server. Import and instantiate the class to integrate it with your code
 
 ```python
+# sqlGetter.py
 import pyodbc
 import pandas as pd
+
+class Connection:
+	def __init__(self, server, database):
+		self.server = server
+		self.database = database
+		self.cnxn = self.connect()
+
+	def connect(self):
+		cnxn = pyodbc.connect('Trusted_Connection=Yes;DRIVER={ODBC Driver 17 for SQL Server};SERVER='+self.server+';DATABASE='+self.database)	
+		print('Connection to {} established on {}'.format(self.database,self.server))
+		return cnxn
+
+	def pandize_data(self, query, string = False):
+		if not string:
+			path = query+'.sql'
+			with open(path, 'r') as file:
+				sql = file.read()
+		else:
+			sql = query
+		return pd.read_sql_query(sql,self.cnxn)
+
+```
+
+```python
+# yourPythonCode.py
+from sqlGetter import Connection
 
 server = 'YOUR SQL SERVER'
 database = 'HRDC09_Prod'
 
-def connect(server, database):
-	cnxn = pyodbc.connect('Trusted_Connection=Yes;DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database)	
-	print('Connection to {} established on {}'.format(database,server))
-	return cnxn	
+# Create the Connection Object
+cnxn = Connection(server, database)
 
-
-def pandize_data(query):
-	path = query+'.sql'
-	with open(path, 'r') as file:
-		sql = file.read()
-	return pd.read_sql_query(sql,cnxn)
-
-cnxn = connect(server, database)
-
+# Use the built-in pandize_data() function from the Connection object
+data = cnxn.pandize_data('SELECT * FROM Client', string = True) # Pass a literal query
+other_data = cnxn.pandize_data('mysqlcode.sql') # Pass a path to a .sql file
 ```
+
+
 
 ### `connect(server, database)`
 
