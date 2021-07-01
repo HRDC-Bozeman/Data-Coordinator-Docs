@@ -1,6 +1,6 @@
 # HRDC Data Documentation Project
 
-This is the central location for all the most up-to-date CaseWorthy Information. It's still new and incomplete, but eventually this repository will contain
+This is the central location for all the most up-to-date data coordination documentation.
 
 
 - [Contribute to this documentation](Instructions/Contribute.md)

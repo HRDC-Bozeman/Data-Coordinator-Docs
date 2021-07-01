@@ -192,16 +192,15 @@ You can create a new assessment from the assessment summary form by clicking the
 ## Household Composition Changes 
 [\[Back to Top\]](#table-of-contents)
 
-1. Close the [Program Enrollments](../Forms/1000000266.md) for the family member to be moved.
-1. Review the family history on the [Client Families](../Forms/1000000048.md) form.
-  - Make a new one
-  - Move into an existing one
+Sometimes clients need to be removed from one household and added to another. This process is handled by a CaseWorthy super user.  You can find additional instructions on household composition changes in the admin instructions [here](cwadmin#.md).
 
 ---
 ---
-  
+
 ## Case Management Tools 
 [\[Back to Top\]](#table-of-contents)
+
+Outside of the intake process, there are several other case management tools available in CaseWorthy. Below is a brief overview of some of the most commonly used features.
 
 ### Case Notes
 
@@ -223,10 +222,29 @@ Both of these buttons will take you to the [Services Summary](../Forms/100000025
 
 Clicking the "+ Add New" button brings you to the [Add Services - Universal Intake](../Forms/1000000231.md) form. The program drop down lets you choose which program to provide the service under. Once a program is selected, the service types available to that program will be displayed. Check the checkbox on the left to provide that type of service. Provide the start date, end date, and service quantity. Only one service per service type can be added on one form submission. Submit the form and reload it to give multiple services of the same type.
 
-- Alerts
-- Documents
+### Alerts
+
+Alerts are used to provide important client information to users at a glance. Alerts are used mostly to highlight data quality issues and inform staff of clients that may be banned from HRDC services and locations. Alerts appear on the client dashboard
+
+![Client Alert](../Images/alertdash.png)
+
+To create a new alert for a client, use the [Add/Edit Client Alert](../Forms/1000000197.md) form (Case Management -> Alerts -> Add New). This form allows users to create alerts of different types for a client. Each alert requires a summary, severity, type, and date.
+
+Change the status of the alert from open to closed when it is no longer relevant. 
+
+### Documents
+
+Upload documents through the [Document Check](../Forms/1000000271.md) form (Case Management -> Documents -> Add New). Select one or more document types to be uploaded. For each document type, click browse and find the document locally on your computer. Click save when you attach all the documents.
+
+![Document Check](../Images/documentcheck.png)
+
 - Program Enrollment
-- Program Attendance
+
+### Program Attendance
+
+The [Program Attendance](../Forms/1000000140.md) form allows users to add services for multiple clients on the same date. This functionality is currently used by Homemaker, Senior Reach, and Senior Groceries. Set the service date, quantity, program, and service type. Clients with open enrollments in the selected program will appear in the list. Check each client that received that service on that day. You can edit the quantity for each client receiving a service, but the default value will be the on set at the top of the form.
+
+![Program Attendance](../Images/programattendance.png)
    
 
 
