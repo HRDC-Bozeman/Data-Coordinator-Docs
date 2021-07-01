@@ -3,6 +3,10 @@
 
 # Homebuyer Education Online Registration to CaseWorthy Connection
 
+## [Github Repository for this Project](https://github.com/HRDC-Bozeman/HBE-Integration)
+
+---
+
 - [Homebuyer Education Online Registration Documentation](../../Instructions/onlineHBEregistration.md)
 - [SQL Documentation](../../Instructions/sql.md)
 - [CounselorMax Automated Data Entry](../Cmade/Cmade.md)
