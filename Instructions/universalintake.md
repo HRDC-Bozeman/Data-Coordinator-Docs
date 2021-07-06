@@ -2,8 +2,6 @@
 
 # CaseWorthy Data Entry Instructions
 
-This page will hold all of the generalized universal intake instructions. Other pages will go into program specifics if needed.
-
 ## Table of Contents
 
 1. [Before You Start](#before-you-start)
@@ -52,6 +50,7 @@ The first thing you see when looking at a client record is the Client Dashboard.
   - CaseWorthy Issue Ticket
   - Report Duplicate Clients
   - Data Entry Instructions (this guide)
+- Family Member List. This will highlight rows in magenta for deceased family members
 - Most Recent Assessment
   - The Most Recent Assessment widget shows how fresh the data is on a given client. It displays the date of the last assessment, the program that collected it, and the user that entered it. The information will display in different colors based on the age of the assessment.
     - Less than 3 months: Blue
@@ -131,7 +130,7 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
     
 ### Additional Programs
 
- - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?" Select "Yes" if you are enrolling a client into housing, homemaker, senior reach, or senior groceries. Some housing programs require additional assessment data for funding and compliance purposes. The supplemental enrollment allows CaseWorthy to record those data. Homemaker, Senior Reach, and Senior Groceries use the program attendance feature, which allows services to be added for multiple clients at the same time.
+ - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?" Select "Yes" if you are enrolling a client into housing, homemaker, senior reach, or senior groceries. Some housing programs require additional assessment data for funding and compliance purposes. The supplemental enrollment allows CaseWorthy to record these data. Homemaker, Senior Reach, and Senior Groceries use the program attendance feature, which allows services to be added for multiple clients at the same time.
 
 ![Additional Enrollments?](../Images/additionalprograms.JPG)
 
@@ -161,7 +160,7 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
 
 If you need to enroll a client or family that already exists in CaseWorthy the process is much simpler. Click the "Intake: Existing Clients" button on the left navigation bar. This launches a shorter workflow that focuses on enrollment and assessment data, and skips collecting some of the more general client demographics.
 
-1. On the [Enrollment Add/Edit](../Forms/1000000030.md) form select the program you are enrolling them in.
+1. On the [Enrollment Add/Edit](../Forms/1000000030.md) form select the program you are enrolling the client in.
 1. Select which family members to enroll on the [Enrollment Members](../Forms/1000000259.md) form.
 1. At this point you will be asked: "Complete assessments at this time?" If you have recent data available you should say yes. You have the option of saying no and skipping the remaining steps of the intake, but this option should only be used if the complete data is not available and we need some sort of client record in the system. This will leave the enrollment status as "Assessments Pending". To complete them go to the [Program Enrollment](../Forms/1000000266.md) form, and click on the assessments pending link. already entered for the Universal Intake.
 1. Once the enrollment is created and all the members are added, the workflow creates an <a href="Objects/Assessment.md" target="_blank">Assessment</a> for each family member. The required assessments will vary based on the program.
