@@ -53,7 +53,7 @@ Sometimes clients need to be moved to different households. This section will co
   
   
   
-- Remove the client from program enrollments that are not being transferred using the [Program Enrollment](..Forms/1000000266.md) and [Add/Edit Members](../Forms/Baseline49.md) forms.
+- Remove the client from program enrollments that are not being transferred using the [Program Enrollment](../Forms/1000000266.md) and [Add/Edit Members](../Forms/Baseline49.md) forms.
   - Change date from "Open" to the appropriate ending date.
   - Click path: Action gear - Member - "+ Add/Edit Members"
 
@@ -70,6 +70,28 @@ In most cases, a client should only be in one family at a time. Make sure that t
 
 ## Client Merges
 
+When the same client is entered into CaseWorthy under two different client records they must be merged. The CaseWorthy client merge functionality is found on the left-nav bar in the Universal Intake role, under 'Admin Tools - Client Administration - Merge Clients - Add New'. Before using this form, it is wise to fully nail down which records are going to be merged into each other. At the end of the process one of the records will be deleted, and the other one will remain. 
+
+Ways to determine how to merge:
+- Record age: usually newer records should be merged into older ones
+- Number of services/enrollments: records with fewer services should be merged into records with more
+- Family members: if one family is missing family members, merge into the record with all family members
+
+### Example merge
+
+In this example, I will walk you through the process for completing a client/family merge. The first step is to determine which family should be merged into the other. Here we have two families, both with a head of household named "Client Merge Demo" and a child named "Client Child Demo", you can see how these results show up in a simple client search. The yellow highlighted rows are for "Client Merge Demo" and the greenish rows are for "Client Child Demo". You can see that they not only share the same name, but the exact birthday and Social Security number as well. This is pretty strong evidence that these files are, in fact, referring to the same people.
+
+![Merge Example 1](../Images/mergeexample1.png)
+
+Figuring out which family should be merged into the other can be subjective. In this example one of the records (familyID: 45338) has 4 services associated with it, while the other one only has one (familyID: 45337). Otherwise, the two families are identical. For that reason, I am going to merge familyID 45337 into familyID 45338. 
+
+
+
+Next, you need to use the [Merge Families](../Forms/1000000288.md) form to queue up the merge. There are some detailed instructions on the form itself, but the most important thing to remember is that "family A" will be merged into "family B". In our example that means we want to make familyID 45337 "family A" and familyID 45338 "family B". When you click on the form fields for the two families, it will pop-up a look up form, where you can search for the corresponding client. Once you have both families entered on the form, you need to check the rows for the clients you wish to merge. For each client you have to specify which client record in the destination family is correct, this is done by matching up the names. 
+
+![Merge Families Form](../Images/mergefamilies.png)
+
+Once you save on the Merge Families form, you can see your merge process staged on the Client Merge Summary form (Admin Tools - Client Administration). To perform the merge, click the action gear for the record you want to process, and click "Process". A merge can take several minutes and during that time it may deadlock the rest of the application, for that reason it is wise to run client merges during non-working hours. 
 
 ## [Structured Query Language (SQL)](sql.md)
 ## SQL Server Reporting Service (SSRS)
