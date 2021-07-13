@@ -4,14 +4,11 @@
 
 This page will outline some of the basics of the day-to-day administration of CaseWorthy
 
-1. Users
+1. [Users](#users)
    1. Off-boarding
-1. Household Composition Changes
-1. Client Merges
-1. Database Backups
-1. SQL Server Management Studio (SSMS)
+1. [Household Composition Changes](#household-composition-changes)
+1. [Client Merges](#client-merges)
 1. [Structured Query Language (SQL)](sql.md)
-1. SQL Server Reporting Service (SSRS)
 1. [`sqlGetter.py`](#sqlgetter.py)
 
 ---
@@ -40,14 +37,22 @@ Sometimes clients need to be moved to different households. This section will co
 
 - View client family history with the [Client Families](../Forms/1000000048.md) form. Each row represents a family that this client has been a member of.
 
-![Client Family History](../Images/clientfamilyhistory.png)
+
 
 - Determine if the client needs to be moved into a new family or an existing family
   - For a new family use the [ADMIN ONLY - Create a New Family](../Forms/1000000202.md) form
+    - To create a family, enter the new family name and hit save.
+    - Family names should be in the format "Lastname,Firstname-[DOB]" in YYYY-MM-DD format.
+    - e.g. "Smith,Joseph-2000-10-01"
   - For an existing family
     - Look up the head of household of the new family
     - Use the [Add Family Member Spreadsheet](../Forms/Baseline7114.md) on the left-nav bar to add the new family member
-- Determine if any enrollments need to be transferred to the new family. Transfer enrollments when the client(s) moving to the new family is (are) the only enrollment member(s)
+    - Click "Add row" to add a new person to that family.
+    - It works best if you enter only a few data points, and then "check for duplicates". That way the database can retrieve most of the data for you.
+    
+![Add Family Member Spreadsheet](../Images/addfamilymember.png)
+    
+- Determine if any enrollments need to be transferred to the new family. Transfer enrollments when the clients moving to the new family are the only enrollment members. You see enrollment members from the Case Management -> Program Enrollment -> Action Gear -> Members.
   - Transfer these enrollments to the new family ID using the [Edit Enrollment - Admin](../Forms/1000000111.md)
   
   
@@ -55,13 +60,15 @@ Sometimes clients need to be moved to different households. This section will co
   
 - Remove the client from program enrollments that are not being transferred using the [Program Enrollment](../Forms/1000000266.md) and [Add/Edit Members](../Forms/Baseline49.md) forms.
   - Change date from "Open" to the appropriate ending date.
-  - Click path: Action gear - Member - "+ Add/Edit Members"
+  - Click path: Action gear -> Member -> "+ Add/Edit Members"
 
 
 
 - If the client is moving back into an old family you can simply change the date added on that row to the appropriate date, and change the date removed to "Open".
 
-In most cases, a client should only be in one family at a time. Make sure that the date added to the new family is the same as the date removed from the old family. The most notable exception to this is children in a joint custody situation. 
+In most cases, a client should only be in one family at a time. Make sure that the date added to the new family is the same as the date removed from the old family.
+
+![Client Family History](../Images/clientfamilyhistory.png)
 
 
 
@@ -70,7 +77,7 @@ In most cases, a client should only be in one family at a time. Make sure that t
 
 ## Client Merges
 
-When the same client is entered into CaseWorthy under two different client records they must be merged. The CaseWorthy client merge functionality is found on the left-nav bar in the Universal Intake role, under 'Admin Tools - Client Administration - Merge Clients - Add New'. Before using this form, it is wise to fully nail down which records are going to be merged into each other. At the end of the process one of the records will be deleted, and the other one will remain. 
+When the same client is entered into CaseWorthy under two different client records they must be merged. The CaseWorthy client merge functionality is found on the left-nav bar in the Universal Intake role, under 'Admin Tools -> Client Administration -> Merge Clients -> Add New'. Before using this form, it is wise to fully nail down which records are going to be merged into each other. At the end of the process one of the records will be deleted, and the other one will remain. 
 
 Ways to determine how to merge:
 - Record age: usually newer records should be merged into older ones
@@ -91,7 +98,7 @@ Next, you need to use the [Merge Families](../Forms/1000000288.md) form to queue
 
 ![Merge Families Form](../Images/mergefamilies.png)
 
-Once you save on the Merge Families form, you can see your merge process staged on the Client Merge Summary form (Admin Tools - Client Administration). To perform the merge, click the action gear for the record you want to process, and click "Process". A merge can take several minutes and during that time it may deadlock the rest of the application, for that reason it is wise to run client merges during non-working hours. 
+Once you save on the Merge Families form, you can see your merge process staged on the Client Merge Summary form (Admin Tools -> Client Administration). To perform the merge, click the action gear for the record you want to process, and click "Process". A merge can take several minutes and during that time it may deadlock the rest of the application, for that reason it is wise to run client merges during non-working hours. 
 
 ## [Structured Query Language (SQL)](sql.md)
 ## SQL Server Reporting Service (SSRS)

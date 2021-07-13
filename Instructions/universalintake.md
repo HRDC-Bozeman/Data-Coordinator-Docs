@@ -191,7 +191,7 @@ You can create a new assessment from the assessment summary form by clicking the
 ## Household Composition Changes 
 [\[Back to Top\]](#table-of-contents)
 
-Sometimes clients need to be removed from one household and added to another. This process is handled by a CaseWorthy super user.  You can find additional instructions on household composition changes in the admin instructions [here](cwadmin#.md).
+Sometimes clients need to be removed from one household and added to another. This process is handled by a CaseWorthy super user.  You can find additional instructions on household composition changes in the admin instructions [here](cwadmin.md).
 
 ---
 ---
