@@ -4,6 +4,8 @@ SELECT E.EntityID
 	   , O.OutcomeDate 'Date'
 	   , P.ProgramName 'Program Collecting Score'
 	   , A.BeginAssessment 'Alternate Date'
+	   , En.FamilyID
+	   , (SELECT ListLabel FROM ListItem WHERE ListID = 27 AND ListValue = A.AssessmentEvent) 'Assessment Event'
 FROM Outcome O
 	INNER JOIN ContextType CT
 		ON CT.ContextTypeID = O.ContextTypeID

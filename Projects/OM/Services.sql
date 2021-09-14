@@ -6,6 +6,16 @@ SELECT E.EntityID
 	   , S.ServiceTotal 'Total'
 	   , S.BeginDate 'Date'
 	   , A.AccountName 'Program'
+	   , CASE
+			WHEN A.AccountName IN ('Warming Center'
+								   ,'Warming Center - Livingston'
+								   ,'Housing First'
+								   ,'Housing Choice Voucher'
+								   ,'Section 8 Housing'
+								   ,'Day Center'
+								   ,'Housing Navigation') THEN 1
+			ELSE 0
+		END 'Housing Service'
 FROM Service S
 	INNER JOIN Account A
 		ON A.AccountID = S.AccountID

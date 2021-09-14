@@ -31,6 +31,7 @@ def import_om_data():
 				, 'Financial Literacy']
 
 	om = om[om.Domain.isin(domains)]
+	om.to_csv('om_scores.csv')
 	return om
 
 
@@ -42,6 +43,11 @@ def import_final_om():
 
 	return data
 
+
+def import_demog_data():
+	demogs = hrdcdb.pandize_data('Demogs')
+	demogs.to_csv('demogs.csv')
+	return demogs
 
 
 def import_service_data():
@@ -132,15 +138,17 @@ def import_final_dataset():
 
 
 # data = calculate_deltas(om)
-# om = import_om_data()
+om = import_om_data()
+serv = import_service_data()
+demogs = import_demog_data()
 # df = speed_test(om)
 # om = import_final_om()
 # data = om.apply(pivot_services, axis = 1)
 # data.to_csv('om_and_services.csv')
 # data = pd.merge(om, serv, how = 'outer')
 # data = pd.read_csv('test_sample.csv')
-data = import_final_dataset()
-code.interact(local = locals())
+# data = import_final_dataset()
+# code.interact(local = locals())
 
 
 
