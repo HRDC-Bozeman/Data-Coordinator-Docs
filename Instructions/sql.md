@@ -24,7 +24,7 @@
 - CaseWorthy, the corporation
   - CaseWorthy is also a corporate entity that manages and maintains the application and database layers.
 
-CaseWorthy provides a full database backup on a nightly basis. These backups come in the form of a .bak file. You can find them under the HRDC Admin role, Administration tab, click-path shown below.
+CaseWorthy provides a full database backup on a nightly basis. These backups come in the form of a .bak file. You can find them under the HRDC Admin role, Administration tab, click-path shown below. Download the most recent database back up and save it to an easily accessed place on the C: drive.
 
 ![Database Backups](../Images/databasebackups.png)
 
