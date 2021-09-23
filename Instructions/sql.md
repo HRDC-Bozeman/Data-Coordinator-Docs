@@ -46,10 +46,10 @@ Make a note of the "Instance Name" when the installation is finished.
 
 ![SQL Server Install Complete](../Images/sqlserverinstallcomplete.JPG)
 
-
+ 
 ### Connect via SSMS
 
-When you open SSMS it will prompt you to connect to a SQL database server. In our case the server will be the one you installed on the previous step.
+When you open SSMS it will prompt you to connect to a SQL database server. In our case the server will be the one you installed on the previous step. You must have administrator access in order to conect to the server. To connect select the down arrow on the server and hit browse for more. Then select local servers tab then expand database engine and select your computer name. Hit ok and then connect.
 
 ![Connect to local database](../Images/connectssms.JPG)
 
