@@ -16,6 +16,7 @@
    1. Updating Client Assessments
 1. [Household Composition Changes](#household-composition-changes)
 1. [Case Management Tools](#case-management-tools)
+1. [Universal Intake Enrollment] (#universal-intake-enrollment)
 
 ## Before You Start
 
@@ -246,6 +247,8 @@ The [Program Attendance](../Forms/1000000140.md) form allows users to add servic
 ![Program Attendance](../Images/programattendance.png)
 
 ## Universal Intake Enrollment
+[\[Back to Top\]](#universal-intake-enrollment)
+
 test
    
 
