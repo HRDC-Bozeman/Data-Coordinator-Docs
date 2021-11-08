@@ -250,7 +250,7 @@ The [Program Attendance](../Forms/1000000140.md) form allows users to add servic
 [\[Back to Top\]](#universal-intake-enrollment)
 
 When trying to add a service to a client if you are running into the issue of not having a Universal Intake EnrollmentID there are two different paths that may fix the issue. Begin by navigating to the head of household then to Case management- Program Enrollment. This will populate a list of programs if Universal Intake is on the list click the action gear and then member. In the top right you will click Add/Edit Members. You will then click all the check marks beside clients until they are all green.
-[Universal Intake Enrollment]
+[Universal Intake Enrollment](![image](https://user-images.githubusercontent.com/91148563/140779095-fc569b38-1b5b-4245-a2f1-939d8f7e248c.png))
 If Universal Intake was not on the list under Case Management - Program Enrollment then click Intake: Existing Clients and add universal Intake. Ensure that you add all family members as well by clicking the check mark green on the next page. 
 
    
