@@ -16,7 +16,7 @@
    1. Updating Client Assessments
 1. [Household Composition Changes](#household-composition-changes)
 1. [Case Management Tools](#case-management-tools)
-1. [Universal Intake Enrollment] (#universal-intake-enrollment)
+1. [Universal Intake Enrollment](#universal-intake-enrollment)
 
 ## Before You Start
 
