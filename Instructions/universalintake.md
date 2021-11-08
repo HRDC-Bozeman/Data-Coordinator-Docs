@@ -244,6 +244,9 @@ Upload documents through the [Document Check](../Forms/1000000271.md) form (Case
 The [Program Attendance](../Forms/1000000140.md) form allows users to add services for multiple clients on the same date. This functionality is currently used by Homemaker, Senior Reach, and Senior Groceries. Set the service date, quantity, program, and service type. Clients with open enrollments in the selected program will appear in the list. Check each client that received that service on that day. You can edit the quantity for each client receiving a service, but the default value will be the on set at the top of the form.
 
 ![Program Attendance](../Images/programattendance.png)
+
+## Universal Intake Enrollment
+test
    
 
 
