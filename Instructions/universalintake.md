@@ -52,16 +52,15 @@ The first thing you see when looking at a client record is the Client Dashboard.
   - Report Duplicate Clients
   - Data Entry Instructions (this guide)
 - Family Member List. This will highlight rows in magenta for deceased family members
-- Most Recent Assessment
-  - The Most Recent Assessment widget shows how fresh the data is on a given client. It displays the date of the last assessment, the program that collected it, and the user that entered it. The information will display in different colors based on the age of the assessment.
+- Most Recent Assessments
+  - The Most Recent Assessment widgets show how fresh the data is on a given client. It displays the date of the last assessment, the program that collected it, and the user that entered it. The information will display in different colors based on the age of the assessment.
     - Less than 3 months: Blue
     - 3-6 months: Orange
     - \>6 months: Red
-- Client Data
-  - The client data widget displays some basic personal identifying information
+
 - Address History
-- Universal Intake Enrollment
-  - This widget shows the Universal Intake enrollment information.
+- Document Check
+   - All of the documents associated with this client.
 
 ---
 ---
@@ -131,7 +130,7 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
     
 ### Additional Programs
 
- - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?" Select "Yes" if you are enrolling a client into housing, homemaker, senior reach, or senior groceries. Some housing programs require additional assessment data for funding and compliance purposes. The supplemental enrollment allows CaseWorthy to record these data. Homemaker, Senior Reach, and Senior Groceries use the program attendance feature, which allows services to be added for multiple clients at the same time.
+ - Once all the assessment data is collected, you will be asked "Would you like to enroll members of this household into any additional programs?" Select "Yes" if you are enrolling a client into homemaker, senior reach, or senior groceries. Homemaker, Senior Reach, and Senior Groceries use the program attendance feature, which allows services to be added for multiple clients at the same time which is why they have individual enrollments.
 
 ![Additional Enrollments?](../Images/additionalprograms.JPG)
 
@@ -142,11 +141,7 @@ To create a new client in CaseWorthy click the "Intake: Brand New Clients" butto
  - You will again be asked if you want to complete assessments, say yes. This will create a new set of [Assessments](../Objects/Assessment.md) that will be tied to the additional program enrollment.
  - You may be given the option to Copy Assessments. This will fill in all the data that you already entered for the Universal Intake.
  
- #### Housing
- 
- - The [HUD Assessment](../Forms/1000000248.md) may ask for additional data depending on the family.
- - The [Chronic Homelessness](../Forms/1000000262.md) collects more detailed information about the housing status of each family member. Data entered on this form determines if a client meets the HUD definition for chronic homelessness.
- - There are no additional questions on the [Financial Assessment](../Forms/1000000145.md), but you may be prompted to enter data on additional family members.
+
  
  #### Homemaker, Senior Reach, Senior Groceries
  
@@ -184,7 +179,7 @@ An Assessment is simply a collection of data made by a specific program on a spe
 
 It is important to regularly update our client data. It is a good rule of thumb to keep the data less than 6 months old. You can quickly identify if a client's data is older than that by the color coded Most Recent Assessment dashboard widget.
 
-You can create a new assessment from the assessment summary form by clicking the "+ Add New" button in the top-right corner. This will launch the [New Assessment](../Forms/1000000267.md) form. Select the program and assessment type, enter the date, and hit "Save". You will be directed to fill out the [HUD Assessment](../Forms/1000000248.md) form, but you will have to go back to the assessment summary form to fill in values for the other assessment forms.
+You can create a new assessment from the assessment summary form by clicking the "+ Add New Housing Assessment" or the "+ Add New FOC Assessment"  button at the top-right corner. This will launch the [New Assessment](../Forms/1000000267.md) form. Select the program and assessment type, enter the date, and hit "Save". You will be directed to fill out the [HUD Assessment](../Forms/1000000248.md) form, but you will have to go back to the assessment summary form to fill in values for the other assessment forms.
 
 ---
 ---
