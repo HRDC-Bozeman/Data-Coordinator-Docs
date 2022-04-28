@@ -228,7 +228,7 @@ Clicking the "+ Add New" button brings you to the [Add Services - Universal Inta
 
 ### Alerts
 
-Video directions for adding a alert: 
+Video directions for adding a alert: https://www.screencast.com/t/oXnpONoKM
 
 Alerts are used to provide important client information to users at a glance. Alerts are used mostly to highlight data quality issues and inform staff of clients that may be banned from HRDC services and locations. Alerts appear on the client dashboard
 
