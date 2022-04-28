@@ -104,6 +104,8 @@ You should always search in at least two different ways, but possibly more if th
 ## Brand New Clients 
 [\[Back to Top\]](#table-of-contents)
 
+Video explanation of entering a Brand New Client: https://www.screencast.com/t/TenVRcAV73
+
 ### Step-by-Step
 To create a new client in CaseWorthy click the "Intake: Brand New Clients" button on the left navigation bar. This will start a new workflow, which is a series of forms that gather the required information about the client and their interactions with HRDC. Each of the list items below represents an individual form.
 
@@ -202,6 +204,8 @@ Outside of the intake process, there are several other case management tools ava
 
 ### Case Notes
 
+Video directions for Case notes:https://www.screencast.com/t/mzc6JhtDXH8
+
 Case notes can be accessed through the Case Management menu on the left-nav bar. The [case note summary]() form displays all the case notes for the active client. You can filter which types of case notes are displayed. You can select one or more case notes using the checkboxes on the left side, and click print selected to export all of them into a single document. Click "Add New" in the upper right corner to create a new case note.
 
 ![Case Note Summary](../Images/casenotesummary.png)
@@ -209,6 +213,8 @@ Case notes can be accessed through the Case Management menu on the left-nav bar.
 ---
 
 ### Services
+
+Video directions for adding a service: https://www.screencast.com/t/5PowdPws0lx
 
 There are two places to access a client's service history. If you click the family drop-down arrow in the top-left, it will reveal the demographics and services buttons. You can also find it in the Case Management menu on the left-nav bar.
 
@@ -222,6 +228,8 @@ Clicking the "+ Add New" button brings you to the [Add Services - Universal Inta
 
 ### Alerts
 
+Video directions for adding a alert: 
+
 Alerts are used to provide important client information to users at a glance. Alerts are used mostly to highlight data quality issues and inform staff of clients that may be banned from HRDC services and locations. Alerts appear on the client dashboard
 
 ![Client Alert](../Images/alertdash.png)
@@ -231,6 +239,8 @@ To create a new alert for a client, use the [Add/Edit Client Alert](../Forms/100
 Change the status of the alert from open to closed when it is no longer relevant. 
 
 ### Documents
+
+Video directions for adding a document: https://www.screencast.com/t/NitJ7D63
 
 Upload documents through the [Document Check](../Forms/1000000271.md) form (Case Management -> Documents -> Add New). Select one or more document types to be uploaded. For each document type, click browse and find the document locally on your computer. Click save when you attach all the documents.
 
