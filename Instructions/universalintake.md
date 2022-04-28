@@ -68,6 +68,9 @@ The first thing you see when looking at a client record is the Client Dashboard.
 ## Finding Clients 
 [\[Back to Top\]](#table-of-contents)
 
+Video explanation of find client: https://www.screencast.com/t/qkTrbESPTQ 
+
+
 To find clients, click the "Find Client" menu item on the left. This will open a form that with several fields for personal information:
 
 * First and Last Name
